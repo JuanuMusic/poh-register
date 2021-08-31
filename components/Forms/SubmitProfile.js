@@ -1,27 +1,29 @@
 import styles from "../../styles/styles.module.scss";
 import { useFormData } from "../../context";
 
+import { useForm } from "react-hook-form";
+
 export default function SubmitProfile({ formStep, nextFormStep }) {
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
 
-  const handleSubmit = (values) => {
+  const onSubmit = (values) => {
     setFormValues(values);
     nextFormStep();
   };
 
   return (
     <div className={formStep === 4 ? styles.showForm : styles.hideForm}>
-      <h2>Confirm Purchase</h2>
+      <h2>Submit Profile</h2>
 
-      <form>
+      <form onClick={handleSubmit(onSubmit)}>
         <div className={styles.formRow}>
-          <label htmlFor="checkbox">
-            <input type="checkbox" name="checkbox" />
-            Ready to go?
-          </label>
+          <p>
+            Are you ready to submit? Pay here.
+          </p>
         </div>
-        <button type="button" onClick={nextFormStep}>
-          Confirm purchase
+        <button type="button">
+          Submit Profile
         </button>
       </form>
     </div>

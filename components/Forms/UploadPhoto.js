@@ -1,10 +1,13 @@
 import styles from "../../styles/styles.module.scss";
 import { useFormData } from "../../context";
 
+import { useForm } from "react-hook-form";
+
 export default function UploadPhoto({ formStep, nextFormStep }) {
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
 
-  const handleSubmit = (values) => {
+  const onSubmit = (values) => {
     setFormValues(values);
     nextFormStep();
   };
@@ -18,12 +21,12 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
         <li>All facial features must be visible</li>
       </ul>
 
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.formRow}>
-          <label htmlFor="address">Address</label>
-          <input type="address" name="address" id="address" />
+          <label htmlFor="photo">Your Photo</label>
+          <input type="file" {...register("photo")} />
         </div>
-        <button type="button" onClick={nextFormStep}>
+        <button type="submit">
           Next
         </button>
       </form>

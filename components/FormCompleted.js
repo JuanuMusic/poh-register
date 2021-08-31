@@ -1,4 +1,10 @@
+import { useFormData } from "../context";
+
 export default function FormCompleted() {
+  const { data } = useFormData();
+  console.log('Got:');
+  console.log(data);
+
   return (
     <div>
       <h2>Congratulations! 🎉</h2>
