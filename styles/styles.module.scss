@@ -1,20 +1,21 @@
-$primary-color: #1d3557;
-$error-color: #e63946;
-$bg-color: #f1faee;
+$primary-color: #FF9900;
+$error-color: #F60C36;
+$bg-color: #FFFCF0;
 $text-color: #293241;
 $color-white: #fff;
 
-$border-radius: 4px;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 2rem;
 
 .container {
   padding: 3rem;
   width: 600px;
-  border-radius: $border-radius;
+  border-radius: $border-radius-sm;
 
   .formCard {
     border: 2px solid rgba(29, 53, 87);
     padding: 2rem;
-    border-radius: $border-radius;
+    border-radius: $border-radius-sm;
     box-shadow: 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 #0000;
     background: white;
   }
@@ -26,6 +27,11 @@ $border-radius: 4px;
   }
 
   h2 {
+    color: $text-color;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
     color: $text-color;
     margin-bottom: 1rem;
   }
@@ -42,7 +48,7 @@ $border-radius: 4px;
 
   input {
     border: 2px solid rgba($primary-color, 0.8);
-    border-radius: $border-radius;
+    border-radius: $border-radius-lg;
     padding: 0.5rem 1rem;
     padding-left: 1rem;
     font-size: 1rem;
@@ -59,7 +65,7 @@ $border-radius: 4px;
     width: 100%;
     font-size: 1.4rem;
     background: $primary-color;
-    border-radius: $border-radius;
+    border-radius: $border-radius-lg;
     border: none;
     cursor: pointer;
     padding: 0.8rem 1.2rem;
@@ -115,5 +121,9 @@ $border-radius: 4px;
 
   .showForm {
     display: block;
+  }
+  
+  ul {
+    margin-bottom: 1.5rem;
   }
 }

@@ -24,7 +24,6 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
       {children}
       <hr style={{margin: "2rem 0;"}} />
       <h3>Profile Data</h3>
-      <br/>
       <ul>
       {
         Object.keys(data).map((key, i) => {
