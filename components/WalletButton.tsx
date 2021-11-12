@@ -6,6 +6,8 @@ import { Button } from "@material-ui/core";
 export default function WalletButton(props: {
   loadWeb3Modal?: any;
   logoutOfWeb3Modal?: any;
+  provider?: Web3Provider;
+  onClick?: any;
 }) {
   // const { account, web3Provider } = useAccount();
   const [rendered, setRendered] = useState("");
@@ -33,6 +35,7 @@ export default function WalletButton(props: {
     <Button
       onClick={() => {
         console.log("TODO");
+        props.onClick && props.onClick();
         // if (!web3Provider) {
         //   props.loadWeb3Modal();
         // } else {

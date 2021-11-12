@@ -18,6 +18,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
     <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
       <h2>Connect your wallet</h2>
       <WalletButton
+          onClick={() => nextFormStep()}
           provider={provider as Web3Provider}
           loadWeb3Modal={loadWeb3Modal}
           logoutOfWeb3Modal={logoutOfWeb3Modal}
