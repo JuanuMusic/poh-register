@@ -13,7 +13,7 @@ export default function UploadVideo({ formStep, nextFormStep }) {
   };
 
   return (
-    <div className={formStep === 2 ? styles.showForm : styles.hideForm}>
+    <div className={formStep === 3 ? styles.showForm : styles.hideForm}>
       <h2>Upload your video</h2>
 
       <ul>

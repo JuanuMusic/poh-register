@@ -13,7 +13,7 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
   };
 
   return (
-    <div className={formStep === 1 ? styles.showForm : styles.hideForm}>
+    <div className={formStep === 2 ? styles.showForm : styles.hideForm}>
       <h2>Upload your picture</h2>
 
       <ul>
