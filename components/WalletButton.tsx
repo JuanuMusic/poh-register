@@ -1,42 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { Web3Provider } from "@ethersproject/providers";
 import { Button } from "@material-ui/core";
-import { useAccount } from "../context/AccountProvider";
+//import { useAccount } from "../context/AccountProvider";
 
 export default function WalletButton(props: {
   loadWeb3Modal?: any;
   logoutOfWeb3Modal?: any;
 }) {
-  const { account, web3Provider } = useAccount();
+  // const { account, web3Provider } = useAccount();
   const [rendered, setRendered] = useState("");
 
-  useEffect(() => {
-    async function fetchAccount() {
-        if (!web3Provider || !account) {
-          return;
-        }
+  // useEffect(() => {
+  //   async function fetchAccount() {
+  //       if (!web3Provider || !account) {
+  //         return;
+  //       }
 
-        // Resolve the ENS name for the first account.
-        const name = await web3Provider.lookupAddress(account);
+  //       // Resolve the ENS name for the first account.
+  //       const name = await web3Provider.lookupAddress(account);
 
-        // Render either the ENS name or the shortened account address.
-        if (name) {
-          setRendered(name);
-        } else {
-          setRendered(account.substring(0, 6) + "..." + account.substring(36));
-        }
-    }
-    fetchAccount();
-  }, [web3Provider, account]);
+  //       // Render either the ENS name or the shortened account address.
+  //       if (name) {
+  //         setRendered(name);
+  //       } else {
+  //         setRendered(account.substring(0, 6) + "..." + account.substring(36));
+  //       }
+  //   }
+  //   fetchAccount();
+  // }, [web3Provider, account]);
 
   return (
     <Button
       onClick={() => {
-        if (!web3Provider) {
-          props.loadWeb3Modal();
-        } else {
-          props.logoutOfWeb3Modal();
-        }
+        console.log("TODO");
+        // if (!web3Provider) {
+        //   props.loadWeb3Modal();
+        // } else {
+        //   props.logoutOfWeb3Modal();
+        // }
       }}
     >
       {rendered === "" && "Connect Wallet"}
