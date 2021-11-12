@@ -13,34 +13,34 @@ export default function WalletButton(props: {
   const [rendered, setRendered] = useState("");
 
   // useEffect(() => {
-  //   async function fetchAccount() {
-  //       if (!web3Provider || !account) {
-  //         return;
-  //       }
+  //   // async function fetchAccount() {
+  //   //     if (!props.provider) {
+  //   //       return;
+  //   //     }
 
-  //       // Resolve the ENS name for the first account.
-  //       const name = await web3Provider.lookupAddress(account);
+  //   //     // Resolve the ENS name for the first account.
+  //   //     const name = await props.lookupAddress(account);
 
-  //       // Render either the ENS name or the shortened account address.
-  //       if (name) {
-  //         setRendered(name);
-  //       } else {
-  //         setRendered(account.substring(0, 6) + "..." + account.substring(36));
-  //       }
-  //   }
-  //   fetchAccount();
+  //   //     // Render either the ENS name or the shortened account address.
+  //   //     if (name) {
+  //   //       setRendered(name);
+  //   //     } else {
+  //   //       setRendered(account.substring(0, 6) + "..." + account.substring(36));
+  //   //     }
+  //   // }
+  //   // fetchAccount();
   // }, [web3Provider, account]);
 
   return (
     <Button
       onClick={() => {
         console.log("TODO");
-        props.onClick && props.onClick();
-        // if (!web3Provider) {
-        //   props.loadWeb3Modal();
-        // } else {
-        //   props.logoutOfWeb3Modal();
-        // }
+        //props.onClick && props.onClick();
+          if (!props.provider) {
+            props.loadWeb3Modal();
+          } else {
+            props.logoutOfWeb3Modal();
+          }
       }}
     >
       {rendered === "" && "Connect Wallet"}
