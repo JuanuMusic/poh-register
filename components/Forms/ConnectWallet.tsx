@@ -1,11 +1,16 @@
 import styles from "../../styles/styles.module.scss";
-
 import { useForm } from "react-hook-form";
 import WalletButton from "../WalletButton";
 import useWeb3Modal from "../../hooks/useWeb3Modal";
 import { Web3Provider } from "@ethersproject/providers";
 
-export default function ConnectWallet({ formStep, nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal }) {
+//Public
+   
+
+
+export default function ConnectWallet({ formStep, nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal })
+
+{
   const { register, handleSubmit, formState: { errors } } = useForm();
   //const { setFormValues } = useFormData();
 
@@ -13,7 +18,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
     //setFormValues(values);
     nextFormStep();
   };
-
+  
   return (
     <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
       <h2>Connect your wallet</h2>
@@ -41,5 +46,6 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
         </button>
       </form> */}
     </div>
+    
   );
 }

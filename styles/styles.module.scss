@@ -7,6 +7,15 @@ $color-white: #fff;
 $border-radius-sm: 0.25rem;
 $border-radius-lg: 2rem;
 
+.headerLogo {
+  width: 26.54px;
+  height: 31px;
+  top: 14px;
+  left: 21.5px;
+   
+
+}
+
 .container {
   padding: 3rem;
   width: 600px;
@@ -19,6 +28,8 @@ $border-radius-lg: 2rem;
     box-shadow: 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 #0000;
     background: white;
   }
+
+  
 
   h1 {
     font-size: 2rem;

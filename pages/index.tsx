@@ -15,6 +15,8 @@ import {
 import FormCompleted from "../components/FormCompleted";
 import useWeb3Modal from "../hooks/useWeb3Modal";
 import ConnectWallet from "../components/Forms/ConnectWallet";
+import Image from 'next/image';
+
 
 const App = () => {
 	const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
@@ -66,9 +68,11 @@ const App = () => {
 
 	return (
 		<div className={styles.container}>
+			<Image src="/images/logopoh.png" alt="me" width="26" height="31"    />
 			<Head>
 				<title>Proof of Humanity</title>
 			</Head>
+			<Image src="/images/logopoh.png" alt="me" width="64" height="64"    />
 			<h1>Join the Registry!</h1>
 
 			<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
