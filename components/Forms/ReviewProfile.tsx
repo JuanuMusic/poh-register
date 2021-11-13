@@ -13,7 +13,7 @@ export default function ReviewProfile({ formStep, nextFormStep }) {
   };
 
   return (
-    <div className={formStep === 3 ? styles.showForm : styles.hideForm}>
+    <div className={formStep === 4 ? styles.showForm : styles.hideForm}>
       <h2>Review your profile</h2>
       <p>Make sure you meet all the requirements for your profile picture and video submission.
         Failing to do so can lead to challenges and you may lose your deposit.

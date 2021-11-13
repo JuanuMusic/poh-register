@@ -13,7 +13,7 @@ export default function CreateProfile({ formStep, nextFormStep }) {
   };
 
   return (
-    <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
+    <div className={formStep === 1 ? styles.showForm : styles.hideForm}>
       <h2>Complete your profile</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
