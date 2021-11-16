@@ -42,9 +42,12 @@ export default function WalletButton(props: {
             props.logoutOfWeb3Modal();
           }
       }}
+      
+      style={{color: 'black', textTransform: 'capitalize'}}
     >
       {rendered === "" && "Already have a wallet"}
       {rendered !== "" && rendered}
+      
     </Button>
   );
 }

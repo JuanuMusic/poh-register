@@ -28,7 +28,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
           loadWeb3Modal={loadWeb3Modal}
           logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
-      <span className={styles.choosewallet}>Choose your favorite wallet</span>
+      <span className={styles.chooseWallet}>Choose your favorite wallet</span>
        {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.formRow}>
           <label htmlFor="displayName">Display Name*</label>
