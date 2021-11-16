@@ -73,14 +73,14 @@ $border-radius-lg: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  .chooseWallet {
+  .connectWallet {
     position: absolute;
     width: 264px;
     height: 19px;
     // left: 572px;
     // top: 362px;
 
-    font-family: Open sans-serif ;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -94,7 +94,7 @@ $border-radius-lg: 2rem;
 
   button:not(.back) {
     color: #0000;
-    font-family: Open sans-serif;
+    font-family: 'Open Sans', sans-serif;
     // width: 100%;
     font-size: 16px;
     // background: white;
