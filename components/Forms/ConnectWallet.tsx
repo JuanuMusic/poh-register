@@ -21,15 +21,15 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
   
   return (
     <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
-      <h2>Connect your wallet</h2>
+      
       <WalletButton
           onClick={() => nextFormStep()}
           provider={provider as Web3Provider}
           loadWeb3Modal={loadWeb3Modal}
           logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
-
-      {/* <form onSubmit={handleSubmit(onSubmit)}>
+      <span className={styles.choosewallet}>Choose your favorite wallet</span>
+       {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.formRow}>
           <label htmlFor="displayName">Display Name*</label>
           <input type="text" {...register("displayName", { required: true })} />
@@ -44,7 +44,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
         <button type="submit">
           Next
         </button>
-      </form> */}
+      </form>  */}
     </div>
     
   );

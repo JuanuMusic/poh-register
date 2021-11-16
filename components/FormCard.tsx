@@ -18,12 +18,12 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
             </button>
           )}
 
-          <span className={styles.steps}>Step {currentStep + 1}/5</span>
+          {/* <span className={styles.steps}>Step {currentStep + 1}/5</span> */}
         </>
       )}
       {children}
       <hr style={{margin: "2rem 0;"}} />
-      <h3>Profile Data</h3>
+      {/* <h3>Profile Data</h3> */}
       <ul>
       {
         Object.keys(data).map((key, i) => {

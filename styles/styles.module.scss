@@ -3,6 +3,7 @@ $error-color: #F60C36;
 $bg-color: #FFFCF0;
 $text-color: #293241;
 $color-white: #fff;
+$color-black: #0000;
 
 $border-radius-sm: 0.25rem;
 $border-radius-lg: 2rem;
@@ -18,15 +19,16 @@ $border-radius-lg: 2rem;
 
 .container {
   padding: 3rem;
-  width: 600px;
+  width: 500px;
+  height: 80px;
   border-radius: $border-radius-sm;
 
   .formCard {
-    border: 2px solid rgba(29, 53, 87);
-    padding: 2rem;
-    border-radius: $border-radius-sm;
-    box-shadow: 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 #0000;
-    background: white;
+    background: #FFFFFF;
+    border: 1px solid #FF9900;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
   }
 
   
@@ -71,20 +73,40 @@ $border-radius-lg: 2rem;
     margin-bottom: 1.5rem;
   }
 
+  .chooseWallet {
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 572px;
+    top: 362px;
+
+    font-family: Open sans-serif ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.45);
+  }
+
   button:not(.back) {
-    color: $color-white;
-    width: 100%;
-    font-size: 1.4rem;
-    background: $primary-color;
-    border-radius: $border-radius-lg;
+    color: $color-black;
+    font-family: Open sans-serif;
+    // width: 100%;
+    font-size: 16px;
+    // background: $primary-color;
+    // border-radius: $border-radius-lg;
     border: none;
     cursor: pointer;
     padding: 0.8rem 1.2rem;
     margin-top: 0.5rem;
 
-    &:hover {
-      background: rgba($primary-color, 0.8);
-    }
+    // &:hover {
+    //   background: rgba($primary-color, 0.8);
+    // }
   }
 
   button.back {

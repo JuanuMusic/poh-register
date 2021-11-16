@@ -43,7 +43,7 @@ export default function WalletButton(props: {
           }
       }}
     >
-      {rendered === "" && "Connect Wallet"}
+      {rendered === "" && "Already have a wallet"}
       {rendered !== "" && rendered}
     </Button>
   );
