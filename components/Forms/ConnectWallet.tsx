@@ -49,7 +49,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
     </div>
     
     <div  >
-    <span className={styles.connectWallet}>I need a wallet</span>  
+    <span className={styles.needWallet}>I need a wallet</span>  
     {/* <Button
         onClick={handleClickOpen}
         

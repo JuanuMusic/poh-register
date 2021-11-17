@@ -19,13 +19,14 @@ $border-radius-lg: 2rem;
 
 .container {
   padding: 3rem;
-  width: 500px;
-  height: 80px;
+  
   border-radius: $border-radius-sm;
 
   .formCard {
     background: #FFFFFF;
     border: 1px solid #FF9900;
+    width: 500px;
+    height: 80px;
     box-sizing: border-box;
     box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
     border-radius: 3px;
@@ -71,6 +72,18 @@ $border-radius-lg: 2rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
+  }
+
+  .needWallet {
+    position: absolute;
+    width: 500px;
+    height: 80px;
+    left: 100px;
+    top: 341px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
   }
 
   .connectWallet {
