@@ -35,23 +35,43 @@ $border-radius-lg: 2rem;
   
 
   h1 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     color: $text-color;
     margin-bottom: 2rem;
   }
 
   h2 {
+    font-family: 'Open Sans', sans-serif;
     color: $text-color;
     margin-bottom: 1rem;
   }
 
   h3 {
+    font-family: 'Open Sans', sans-serif;
     color: $text-color;
     margin-bottom: 1rem;
   }
+.title {
+  display: block;
+  align-items: center;
+  position: absolute;
+  width: 102px;
+  height: 33px;
+  left: 300px;
+  top: 44px;
 
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  
+}
   label,
   input {
+    font-family: 'Open Sans', sans-serif;
     color: $text-color;
   }
 
@@ -61,6 +81,7 @@ $border-radius-lg: 2rem;
   }
 
   input {
+    font-family: 'Open Sans', sans-serif;
     border: 2px solid rgba($primary-color, 0.8);
     border-radius: $border-radius-lg;
     padding: 0.5rem 1rem;
@@ -74,7 +95,16 @@ $border-radius-lg: 2rem;
     margin-bottom: 1.5rem;
   }
 
+  .imgConnect {
+    position: absolute;
+    width: 82.14px;
+    height: 80px;
+    left: 679px;
+    top: 54px;
+  }
+
   .needWallet {
+    display: flex;
     position: absolute;
     width: 500px;
     height: 80px;

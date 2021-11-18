@@ -4,7 +4,11 @@ import WalletButton from "../WalletButton";
 import useWeb3Modal from "../../hooks/useWeb3Modal";
 import { Web3Provider } from "@ethersproject/providers";
 import { Button } from "@material-ui/core";
-
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Grid from "@material-ui/core/Grid";
+// import { Link } from "react-router-dom";
 //Public
    
 
@@ -21,15 +25,22 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
   };
   
   return (
-    <div>
-      <div className={formStep === 0 ? styles.showForm : styles.hideForm}>
-        <WalletButton
-          onClick={() => nextFormStep()}
-          provider={provider as Web3Provider}
-          loadWeb3Modal={loadWeb3Modal}
-          logoutOfWeb3Modal={logoutOfWeb3Modal}
-        />
-        <span className={styles.chooseWallet}>Choose your favorite wallet</span>
+    <List>
+      <Grid container spacing={1}
+          variant="fullWidth"
+          direction="column"
+          justifyContent="space-around"
+          alignItems="left" style={{marginTop: '4px'}}>
+            <Grid item xs={12} md={12} >
+              <ListItem  alignItems="flex-start">
+              <ListItemText className={formStep === 0 ? styles.showForm : styles.hideForm}>
+                <WalletButton
+                onClick={() => nextFormStep()}
+                provider={provider as Web3Provider}
+                loadWeb3Modal={loadWeb3Modal}
+                logoutOfWeb3Modal={logoutOfWeb3Modal}
+                />
+                <span className="chooseWallet">Choose your favorite wallet</span>
        {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.formRow}>
           <label htmlFor="displayName">Display Name*</label>
@@ -46,16 +57,23 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
           Next
         </button>
       </form>  */}
-    </div>
-    
-    <div  >
-    <span className={styles.needWallet}>I need a wallet</span>  
+    </ListItemText>
+    </ListItem>
+    </Grid>
+
+    <Grid item xs={12} md={12} style={{backgroundColor: 'white', borderRadius:'20px', marginBottom:'8px', marginLeft: '0.75rem'}}>
+      <ListItem alignItems="flex-start" >
+    <ListItemText className="needWallet" >
+    <span >I need a wallet</span>  
     {/* <Button
         onClick={handleClickOpen}
         
       /> */}
     
-    </div>
-    </div>  
+    </ListItemText>
+    </ListItem> 
+    </Grid>
+    </Grid>
+    </List> 
   );
 }
