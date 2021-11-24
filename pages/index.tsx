@@ -71,6 +71,7 @@ const App = () => {
 
 	return (
 		<List>
+			<NavBar />
 			<Grid container spacing={1}
 			variant="fullWidth"
 			direction="column"
@@ -78,7 +79,7 @@ const App = () => {
 			alignItems="left" style={{marginTop: '4px'}}>
             <Grid item xs={12} md={12} >
               <ListItem className={styles.container}  alignItems="flex-start">
-				  <NavBar />
+				  
 					<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
 						{formStep >= 0 && (
 							<ConnectWallet
