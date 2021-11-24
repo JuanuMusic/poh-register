@@ -71,7 +71,11 @@ const App = () => {
 
 	return (
 		<List>
-			<NavBar />
+			<NavBar formStep={formStep}
+					nextFormStep={nextFormStep}
+					provider={provider}
+					loadWeb3Modal={loadWeb3Modal}
+					logoutOfWeb3Modal={logoutOfWeb3Modal} />
 			<Grid container spacing={1}
 			variant="fullWidth"
 			direction="column"

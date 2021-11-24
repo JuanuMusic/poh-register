@@ -13,11 +13,15 @@ $border-radius-lg: 2rem;
   height: 61px;
   top: -1rem ;
   left: 40.5px;
-  
-   
-
 }
-
+.NavConnect {
+  display: inline-block;
+  top: -3rem;
+  position: absolute;
+  left: 13rem;
+  font-size: 16px;
+  width: 310px;
+}
 .container {
   // padding: 3rem;
   
