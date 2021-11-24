@@ -17,3 +17,10 @@ body {
   display: flex;
   justify-content: center;
 }
+.imgConnect {
+  /* position: absolute;
+  width: 82.14px;
+  height: 80px;
+  left: 679px; */
+  top: -2rem;
+}

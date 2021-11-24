@@ -9,10 +9,11 @@ $border-radius-sm: 0.25rem;
 $border-radius-lg: 2rem;
 
 .headerLogo {
-  width: 26.54px;
-  height: 31px;
-  top: 14px;
-  left: 21.5px;
+  width: 56.54px;
+  height: 61px;
+  top: -2rem !important;
+  left: 40.5px;
+  
    
 
 }
@@ -22,6 +23,24 @@ $border-radius-lg: 2rem;
   
   border-radius: $border-radius-sm;
 
+  .title {
+    // display: block;
+    align-items: center;
+    // position: absolute;
+    width: 102px;
+    height: 33px;
+    left: 200px!important;
+    top: 44px !important;
+  
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    
+  }
+  
   .formCard {
     background: #FFFFFF;
     border: 1px solid #FF9900;
@@ -32,6 +51,7 @@ $border-radius-lg: 2rem;
     border-radius: 3px;
   }
 
+  
   
 
   h1 {
@@ -52,23 +72,7 @@ $border-radius-lg: 2rem;
     color: $text-color;
     margin-bottom: 1rem;
   }
-.title {
-  display: block;
-  align-items: center;
-  position: absolute;
-  width: 102px;
-  height: 33px;
-  left: 300px;
-  top: 44px;
 
-  
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
-  /* identical to box height */
-  
-}
   label,
   input {
     font-family: 'Open Sans', sans-serif;
@@ -95,13 +99,7 @@ $border-radius-lg: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  .imgConnect {
-    position: absolute;
-    width: 82.14px;
-    height: 80px;
-    left: 679px;
-    top: 54px;
-  }
+  
 
   .needWallet {
     display: flex;

@@ -68,12 +68,13 @@ const App = () => {
 
 	return (
 		<div className={styles.container}>
-			<Image  src="/images/logopoh.png" alt="me" width="26" height="31"    />
+			<Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31"    />
+			
 			<Head>
 				<title>Proof of Humanity</title>
 			</Head>
-			<Image className="imgConnect" src="/images/logopoh.png" alt="me" width="64" height="64"    />
-			<span className="title">Join POH</span>
+			<Image className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="64" height="64"    />
+			<span className={styles.title}>Join POH</span>
 
 			<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
 				{formStep >= 0 && (
@@ -104,6 +105,7 @@ const App = () => {
 				{formStep > 4 && <FormCompleted />}
 			</FormCard>
 		</div>
+		
 	);
 };
 
