@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import WalletButton from "../WalletButton";
 import useWeb3Modal from "../../hooks/useWeb3Modal";
 import { Web3Provider } from "@ethersproject/providers";
-import { Button } from "@material-ui/core";
+import { Button, ListItemAvatar } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -29,13 +29,15 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
     <List>
       <Grid container spacing={1}
           variant="fullWidth"
-          direction="column"
-          justifyContent="space-around"
-          alignItems="left" style={{marginTop: '4px'}}>
-            <Grid item xs={12} md={12} >
-              <ListItem  alignItems="flex-start">
-                <Image className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="64" height="64"    />
-                <ListItemText className={styles.title}>Join POH</ListItemText>
+          direction="row"
+          justifyContent="center"
+          alignItems="flex-start" style={{marginTop: '4px'}}>
+            <Grid direction="row" item xs={12} md={12}>
+              <ListItem >
+                <ListItem item xs={4} >
+                  <Image disableTypography className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="82" height="80"    />
+                </ListItem>
+                <ListItemText disableTypography className={styles.title}>Join POH</ListItemText>
                 </ListItem>
               </Grid>
               <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >

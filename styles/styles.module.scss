@@ -9,10 +9,14 @@ $border-radius-sm: 0.25rem;
 $border-radius-lg: 2rem;
 
 .headerLogo {
-  width: 56.54px;
-  height: 61px;
-  top: -1rem ;
-  left: 40.5px;
+
+  position: absolute;
+  width: 26.54px !important;
+  height: 31px !important;
+  // left: 21.5px;
+  // top: 14.5px;
+
+  background-color: #FFFCF0 !important;
 }
 .NavConnect {
   display: inline-block;
@@ -22,10 +26,37 @@ $border-radius-lg: 2rem;
   font-size: 16px;
   width: 310px;
 }
+
 .container {
   // padding: 3rem;
   
   // border-radius: $border-radius-sm;
+  .imgConnect {
+    display: inline-block !important;
+    align-items: center !important;
+    position: absolute !important;
+    width: 82.14px !important;
+    height: 80px !important;
+    left: -5px !important;
+    top: -8px !important;
+    
+  }
+  .title {
+    display: block;
+    align-items: center;
+    position: absolute;
+    width: 110px !important;
+    height: 33px;
+    left: 200px!important;
+    top: 44px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 525 !important;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    
+  }
 
   .needWallet {
     display: flex;
@@ -33,30 +64,14 @@ $border-radius-lg: 2rem;
     width: 500px;
     height: 80px;
     left: 0px;
-    top: 200px;
+    top: 293px;
     font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
     border-radius: 3px;
   }
 
-  .title {
-    // display: block;
-    align-items: center;
-    // position: absolute;
-    width: 102px;
-    height: 33px;
-    left: 200px!important;
-    top: 44px !important;
   
-    
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 33px;
-    /* identical to box height */
-    
-  }
   
   // .formCard {
   //   background: #FFFFFF;
@@ -120,6 +135,7 @@ $border-radius-lg: 2rem;
     background: #FFFFFF;
     border: 1px solid #FF9900;
     width: 500px;
+    top: 53px !important;
     height: 80px;
     box-sizing: border-box;
     box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
@@ -207,9 +223,10 @@ $border-radius-lg: 2rem;
     display: none;
   }
 
-  .showForm {
-    display: block;
-  }
+  // .showForm {
+  //   display: block;
+  //   background-color: "transparent";
+  // }
   
   ul {
     margin-bottom: 1.5rem;
