@@ -1,11 +1,11 @@
 import { useFormData } from "../context";
 import styles from "../styles/styles.module.scss";
-
+ 
 export default function FormCard({ children, currentStep, prevFormStep }) {
   const { data } = useFormData();
 
   return (
-    <div className={styles.formCard}>
+    <div >
       {currentStep < 5 && (
         <>
           {currentStep > 0 && (

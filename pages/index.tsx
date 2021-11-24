@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import styles from "../styles/styles.module.scss";
 import FormCard from "../components/FormCard";
-
+import NavBar from "../components/NavBar";
 import {
 	CreateProfile,
 	UploadPhoto,
@@ -15,8 +15,11 @@ import {
 import FormCompleted from "../components/FormCompleted";
 import useWeb3Modal from "../hooks/useWeb3Modal";
 import ConnectWallet from "../components/Forms/ConnectWallet";
-import Image from 'next/image';
 
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Grid from "@material-ui/core/Grid";
 
 const App = () => {
 	const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
@@ -67,45 +70,47 @@ const App = () => {
 	}, [provider]);
 
 	return (
-		<div className={styles.container}>
-			<Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31"    />
-			
-			<Head>
-				<title>Proof of Humanity</title>
-			</Head>
-			<Image className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="64" height="64"    />
-			<span className={styles.title}>Join POH</span>
+		<List>
+			<Grid container spacing={1}
+			variant="fullWidth"
+			direction="column"
+			justifyContent="space-around"
+			alignItems="left" style={{marginTop: '4px'}}>
+            <Grid item xs={12} md={12} >
+              <ListItem className={styles.container}  alignItems="flex-start">
+				  <NavBar />
+					<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
+						{formStep >= 0 && (
+							<ConnectWallet
+								formStep={formStep}
+								nextFormStep={nextFormStep}
+								provider={provider}
+								loadWeb3Modal={loadWeb3Modal}
+								logoutOfWeb3Modal={logoutOfWeb3Modal}
+							/>
+						)}
+						{formStep >= 1 && (
+							<CreateProfile formStep={formStep} nextFormStep={nextFormStep} />
+						)}
+						{formStep >= 2 && (
+							<UploadPhoto formStep={formStep} nextFormStep={nextFormStep} />
+						)}
+						{formStep >= 3 && (
+							<UploadVideo formStep={formStep} nextFormStep={nextFormStep} />
+						)}
+						{formStep >= 4 && (
+							<ReviewProfile formStep={formStep} nextFormStep={nextFormStep} />
+						)}
+						{formStep >= 5 && (
+							<SubmitProfile formStep={formStep} nextFormStep={nextFormStep} />
+						)}
 
-			<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
-				{formStep >= 0 && (
-					<ConnectWallet
-						formStep={formStep}
-						nextFormStep={nextFormStep}
-						provider={provider}
-						loadWeb3Modal={loadWeb3Modal}
-						logoutOfWeb3Modal={logoutOfWeb3Modal}
-					/>
-				)}
-				{formStep >= 1 && (
-					<CreateProfile formStep={formStep} nextFormStep={nextFormStep} />
-				)}
-				{formStep >= 2 && (
-					<UploadPhoto formStep={formStep} nextFormStep={nextFormStep} />
-				)}
-				{formStep >= 3 && (
-					<UploadVideo formStep={formStep} nextFormStep={nextFormStep} />
-				)}
-				{formStep >= 4 && (
-					<ReviewProfile formStep={formStep} nextFormStep={nextFormStep} />
-				)}
-				{formStep >= 5 && (
-					<SubmitProfile formStep={formStep} nextFormStep={nextFormStep} />
-				)}
-
-				{formStep > 4 && <FormCompleted />}
-			</FormCard>
-		</div>
-		
+						{formStep > 4 && <FormCompleted />}
+					</FormCard>
+			</ListItem>
+    </Grid>
+	</Grid>
+	</List>	
 	);
 };
 

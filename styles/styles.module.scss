@@ -11,7 +11,7 @@ $border-radius-lg: 2rem;
 .headerLogo {
   width: 56.54px;
   height: 61px;
-  top: -2rem !important;
+  top: -1rem ;
   left: 40.5px;
   
    
@@ -19,9 +19,22 @@ $border-radius-lg: 2rem;
 }
 
 .container {
-  padding: 3rem;
+  // padding: 3rem;
   
-  border-radius: $border-radius-sm;
+  // border-radius: $border-radius-sm;
+
+  .needWallet {
+    display: flex;
+    position: absolute;
+    width: 500px;
+    height: 80px;
+    left: 0px;
+    top: 200px;
+    font-family: 'Open Sans', sans-serif;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+  }
 
   .title {
     // display: block;
@@ -41,15 +54,15 @@ $border-radius-lg: 2rem;
     
   }
   
-  .formCard {
-    background: #FFFFFF;
-    border: 1px solid #FF9900;
-    width: 500px;
-    height: 80px;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
-    border-radius: 3px;
-  }
+  // .formCard {
+  //   background: #FFFFFF;
+  //   border: 1px solid #FF9900;
+  //   width: 500px;
+  //   height: 80px;
+  //   box-sizing: border-box;
+  //   box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+  //   border-radius: 3px;
+  // }
 
   
   
@@ -99,20 +112,17 @@ $border-radius-lg: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  
-
-  .needWallet {
-    display: flex;
-    position: absolute;
+  .connect1 {
+    background: #FFFFFF;
+    border: 1px solid #FF9900;
     width: 500px;
     height: 80px;
-    left: 100px;
-    top: 341px;
-    font-family: 'Open Sans', sans-serif;
-    background: #FFFFFF;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
     border-radius: 3px;
   }
+
+  
 
   .connectWallet {
     position: absolute;

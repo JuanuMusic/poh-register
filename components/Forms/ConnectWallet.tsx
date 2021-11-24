@@ -8,6 +8,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
+import Image from 'next/image';
 // import { Link } from "react-router-dom";
 //Public
    
@@ -33,47 +34,52 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
           alignItems="left" style={{marginTop: '4px'}}>
             <Grid item xs={12} md={12} >
               <ListItem  alignItems="flex-start">
-              <ListItemText className={formStep === 0 ? styles.showForm : styles.hideForm}>
-                <WalletButton
-                onClick={() => nextFormStep()}
-                provider={provider as Web3Provider}
-                loadWeb3Modal={loadWeb3Modal}
-                logoutOfWeb3Modal={logoutOfWeb3Modal}
-                />
-                <span className="chooseWallet">Choose your favorite wallet</span>
-       {/* <form onSubmit={handleSubmit(onSubmit)}>
-        <div className={styles.formRow}>
-          <label htmlFor="displayName">Display Name*</label>
-          <input type="text" {...register("displayName", { required: true })} />
-          {errors.displayName && <span>This field is required</span>}
-        </div>
+                <Image className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="64" height="64"    />
+                <ListItemText className={styles.title}>Join POH</ListItemText>
+                </ListItem>
+              </Grid>
+              <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >
+                <ListItem className={styles.connect1} alignItems="flex-start">
+                  
+                    <WalletButton
+                    onClick={() => nextFormStep()}
+                    provider={provider as Web3Provider}
+                    loadWeb3Modal={loadWeb3Modal}
+                    logoutOfWeb3Modal={logoutOfWeb3Modal}
+                    /> 
+                    
+                <ListItemText className={styles.chooseWallet}>Choose your favorite wallet</ListItemText>
+                  {/* <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className={styles.formRow}>
+                      <label htmlFor="displayName">Display Name*</label>
+                      <input type="text" {...register("displayName", { required: true })} />
+                      {errors.displayName && <span>This field is required</span>}
+                    </div>
 
-        <div className={styles.formRow}>
-          <label htmlFor="bio">Short Bio</label>
-          <input type="text" {...register("bio")} />
-        </div>
+                    <div className={styles.formRow}>
+                      <label htmlFor="bio">Short Bio</label>
+                      <input type="text" {...register("bio")} />
+                    </div>
 
-        <button type="submit">
-          Next
-        </button>
-      </form>  */}
-    </ListItemText>
-    </ListItem>
-    </Grid>
-
-    <Grid item xs={12} md={12} style={{backgroundColor: 'white', borderRadius:'20px', marginBottom:'8px', marginLeft: '0.75rem'}}>
-      <ListItem alignItems="flex-start" >
-    <ListItemText className="needWallet" >
-    <span >I need a wallet</span>  
-    {/* <Button
-        onClick={handleClickOpen}
-        
-      /> */}
-    
-    </ListItemText>
-    </ListItem> 
-    </Grid>
-    </Grid>
+                    <button type="submit">
+                      Next
+                    </button>
+                  </form>  */}
+                  
+                </ListItem>
+              </Grid>
+              <Grid item xs={12} md={12} >
+                <ListItem className={styles.needWallet} >
+                  <ListItemText  >I need a wallet</ListItemText>  
+                {/* <Button
+                    onClick={handleClickOpen}
+                    
+                  /> */}
+                
+                
+                </ListItem> 
+              </Grid>
+      </Grid>
     </List> 
   );
 }
