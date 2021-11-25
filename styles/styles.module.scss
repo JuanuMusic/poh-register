@@ -27,6 +27,13 @@ $border-radius-lg: 2rem;
   width: 310px;
 }
 
+.learnConnect {
+  color: #979797;
+  left: 10px;
+  top: 20px !important;
+}
+
+
 .container {
   // padding: 3rem;
   
@@ -60,6 +67,8 @@ $border-radius-lg: 2rem;
 
   .needWallet {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     width: 500px;
     height: 80px;
@@ -69,6 +78,8 @@ $border-radius-lg: 2rem;
     background: #FFFFFF;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
     border-radius: 3px;
+
+    
   }
 
   
@@ -144,6 +155,24 @@ $border-radius-lg: 2rem;
 
   
 
+  .chooseWallet {
+    color: #979797;
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 96px;
+    top: 38px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+  }
+
   .connectWallet {
     position: absolute;
     width: 264px;
@@ -168,6 +197,8 @@ $border-radius-lg: 2rem;
     font-family: 'Open Sans', sans-serif;
     // width: 100%;
     font-size: 16px;
+    left: 62px;
+    top: -17px;
     // background: white;
     // border-radius: $border-radius-lg;
     border: none;

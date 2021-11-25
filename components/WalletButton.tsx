@@ -43,7 +43,7 @@ export default function WalletButton(props: {
           }
       }}
       
-      style={{color: 'black', textTransform: 'capitalize'}}
+      style={{color: 'black', textTransform: 'none'}}
     >
       {rendered === "" && "Already have a wallet"}
       {rendered !== "" && rendered}
