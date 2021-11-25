@@ -71,9 +71,9 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                 </ListItem>
               </Grid>
               <Grid item xs={12} md={12} >
-                <ListItem className={styles.needWallet} >
-                  <ListItemText style={{left:'10px'}}  >I need a wallet</ListItemText> 
-                  <ListItemText className={styles.learnConnect} > Click here to learn how to create a wallet </ListItemText> 
+                <ListItem className={styles.connectWallet1}>
+                  <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
+                  <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText> 
                 {/* <Button
                     onClick={handleClickOpen}
                     
