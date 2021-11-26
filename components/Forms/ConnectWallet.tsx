@@ -33,21 +33,20 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
           justifyContent="center"
           alignItems="flex-start" style={{marginTop: '4px'}}>
             <Grid direction="row" item xs={12} md={12}>
-              <ListItem >
-                <ListItem item xs={4} >
+              <ListItem style={{flexDirection: 'column'}}>
+                <ListItem item xs={4} style={{width: 'auto'}}>
                   <Image disableTypography className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="82" height="80"    />
                 </ListItem>
                 <ListItemText disableTypography className={styles.title}>Join POH</ListItemText>
-                </ListItem>
-              </Grid>
-              <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >
+              </ListItem>
+            </Grid>
+            <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >
                 <ListItem className={styles.connect1} alignItems="flex-start">
-                  
                     <WalletButton
-                    onClick={() => nextFormStep()}
-                    provider={provider as Web3Provider}
-                    loadWeb3Modal={loadWeb3Modal}
-                    logoutOfWeb3Modal={logoutOfWeb3Modal}
+                      onClick={() => nextFormStep()}
+                      provider={provider as Web3Provider}
+                      loadWeb3Modal={loadWeb3Modal}
+                      logoutOfWeb3Modal={logoutOfWeb3Modal}
                     /> 
                     
                 <ListItemText className={styles.chooseWallet}>Choose your favorite wallet</ListItemText>

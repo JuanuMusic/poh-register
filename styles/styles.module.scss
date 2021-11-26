@@ -47,11 +47,9 @@ $border-radius-lg: 2rem;
   .title {
     display: block;
     align-items: center;
-    position: absolute;
+    position: static;
     width: 110px !important;
     height: 33px;
-    left: 200px!important;
-    top: 44px !important;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 525 !important;
@@ -65,46 +63,36 @@ $border-radius-lg: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: absolute;
     width: 500px;
     height: 80px;
-    left: 0px;
-    top: 293px;
+    margin: auto;
     font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
     border-radius: 3px;
-
   }
 
   .needWallet {
-    position: absolute;
     width: 108px;
     height: 22px;
-    left: 100px;
-    top: 0px;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
     /* identical to box height */
-
+    margin: auto;
     display: flex;
     align-items: center;
-
     color: #000000;
   }
 
   .learnConnect {
     color: #979797;
-    position: absolute;
     width: 264px;
     height: 19px;
-    left: 100px;
-    top: 38px;
-  
+    margin: auto;
+    width: 100%;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -113,6 +101,10 @@ $border-radius-lg: 2rem;
       /* identical to box height */
     display: flex;
     align-items: center;
+  }
+
+  .learnConnect span {
+    margin: auto;
   }
   
   // .formCard {
@@ -177,7 +169,10 @@ $border-radius-lg: 2rem;
     background: #FFFFFF;
     border: 1px solid #FF9900;
     width: 500px;
-    top: 53px !important;
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
     height: 80px;
     box-sizing: border-box;
     box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
@@ -188,12 +183,8 @@ $border-radius-lg: 2rem;
 
   .chooseWallet {
     color: #979797;
-    position: absolute;
     width: 264px;
     height: 19px;
-    left: 96px;
-    top: 38px;
-
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -204,18 +195,20 @@ $border-radius-lg: 2rem;
     align-items: center;
   }
 
+  .chooseWallet span {
+    width: 100%;
+    text-align: center;
+  }
+
   .connectWallet {
-    position: absolute;
     width: 264px;
     height: 19px;
-    // left: 572px;
-    // top: 362px;
-
     font-family: 'Open Sans', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
+    margin: auto;
     /* identical to box height */
     display: flex;
     align-items: center;
