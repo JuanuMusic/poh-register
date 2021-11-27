@@ -44,10 +44,11 @@ export default function WalletButton(props: {
       }}
       
       style={{
+        position: 'relative',
         color: 'black',
         textTransform: 'none',
         margin: 'auto',
-        left: '-17px',
+        left: '20px',
         width: '-webkit-fill-available',
         top: '-16px',
         padding: 0,

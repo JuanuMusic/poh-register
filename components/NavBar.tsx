@@ -17,7 +17,7 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
     <div >
       <Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31"    />
       <ListItem className={styles.NavConnect} >
-        <ListItemText style={{color:"#979797"}}>Already Registered?
+        <ListItemText style={{color:"#979797", width: "310px"}}>Already Registered?
       <WalletButtonH
       onClick={() => nextFormStep()}
       provider={provider as Web3Provider}

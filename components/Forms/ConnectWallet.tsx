@@ -9,6 +9,8 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import Image from 'next/image';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 // import { Link } from "react-router-dom";
 //Public
    
@@ -38,6 +40,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                   <Image disableTypography className={styles.imgConnect} src="/images/logopoh.png" alt="me" width="82" height="80"    />
                 </ListItem>
                 <ListItemText disableTypography className={styles.title}>Join POH</ListItemText>
+                <ListItemText disableTypography className={styles.journey} >To begin this journey, you will need a crypto wallet.</ListItemText>
               </ListItem>
             </Grid>
             <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >
@@ -57,6 +60,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                     /> 
                     
                 <ListItemText className={styles.chooseWallet}>Choose your favorite wallet</ListItemText>
+                <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px"}} />
                   {/* <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.formRow}>
                       <label htmlFor="displayName">Display Name*</label>
@@ -78,8 +82,12 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
               </Grid>
               <Grid item xs={12} md={12} >
                 <ListItem className={styles.connectWallet1}>
+                  <div style={{position: "fixed"}}>
+                    <HelpOutlineIcon style={{color:"#E5E5E5", width: "42px", height: "63px"}}/>
+                  </div>  
                   <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
-                  <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText> 
+                  <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText>
+                  <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px", position: "relative", left: "450px", top: "-25px"}}/> 
                 {/* <Button
                     onClick={handleClickOpen}
                     
