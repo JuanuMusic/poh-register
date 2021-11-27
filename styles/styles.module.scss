@@ -27,6 +27,76 @@ $border-radius-lg: 2rem;
   width: 310px;
 }
 
+.metmask {
+  position: relative;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  left: -2px;
+  display: block;
+  width: 18px;
+  height: 22px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  top: 2px;
+}
+
+.fortmat {
+  position: relative;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 21px;
+  height: 20px;
+  top: -1px;
+  left: 1px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+
+}
+
+.trustWllt {
+  position: relative;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  left: 0px;
+  top: -20px;
+  display: block;
+  width: 18px !important;
+  height: 21px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.wlltcnt {
+  position: relative;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  left: 4px;
+  top: -11px;
+  display: block;
+  width: 18px;
+  height: 39px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
 
 
 
@@ -180,7 +250,6 @@ $border-radius-lg: 2rem;
   }
 
   
-
   .chooseWallet {
     color: #979797;
     width: 264px;

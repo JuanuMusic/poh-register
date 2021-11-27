@@ -43,10 +43,12 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
             <Grid className={formStep === 0 ? styles.showForm : styles.hideForm} item xs={12} md={12} >
             
                 <ListItem className={styles.connect1} alignItems="flex-start">
-                <Image  src="/images/fortmaticicon.png" alt="me" width="15" height="23"/>
-                <Image  src="/images/metamasklogo.png" alt="me" width="22" height="17"/>
-                <Image  src="/images/trustwallet.png" alt="me" width="23" height="23"/>
-                <Image  src="/images/walletconnecticon.png" alt="me" width="21" height="13"/>
+                  <div>
+                    <Image className={styles.metmask} src="/images/metamasklogo.png" alt="me" width="22" height="17"/>
+                    <Image className={styles.fortmat} src="/images/fortmaticicon.png" alt="me" width="15" height="23"/>
+                    <Image className={styles.trustWllt} src="/images/trustwallet.png" alt="me" width="23" height="23"/>
+                    <Image className={styles.wlltcnt}  src="/images/walletconnecticon.png" alt="me" width="21" height="13"/>
+                  </div>
                     <WalletButton
                       onClick={() => nextFormStep()}
                       provider={provider as Web3Provider}
