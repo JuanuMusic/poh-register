@@ -170,7 +170,7 @@ $border-radius-lg: 2rem;
     border: 1px solid #FF9900;
     width: 500px;
     position: static;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: auto;
     height: 80px;
@@ -185,18 +185,22 @@ $border-radius-lg: 2rem;
     color: #979797;
     width: 264px;
     height: 19px;
+    flex-direction: row;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     /* identical to box height */
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    position: relative;
+    top: 11px;
+    left: -233px;
+    // align-items: center;
   }
 
   .chooseWallet span {
-    width: 100%;
+    width: max-content;
     text-align: center;
   }
 
