@@ -60,7 +60,12 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                     /> 
                     
                 <ListItemText className={styles.chooseWallet}>Choose your favorite wallet</ListItemText>
-                <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px"}} />
+                {/* <Button style={{position: "relative"}}> */}
+                <button style={{backgroundColor:"transparent"}}>
+                <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px"}} 
+                onClick={() => nextFormStep()} />
+                </button>
+                {/* </Button> */}
                   {/* <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.formRow}>
                       <label htmlFor="displayName">Display Name*</label>
@@ -87,7 +92,9 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                   </div>  
                   <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
                   <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText>
-                  <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px", position: "relative", left: "450px", top: "-25px"}}/> 
+                  <button style={{backgroundColor:"transparent", position: "relative", left: "413px", top: "-40px"}}>
+                  <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px", position: "relative"}}/> 
+                  </button>
                 {/* <Button
                     onClick={handleClickOpen}
                     
