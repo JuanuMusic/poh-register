@@ -7,7 +7,7 @@ import { Web3Provider } from "@ethersproject/providers";
 import NavBreadCrumb from "./NavBreadCrumb";
 
 
-export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, step })
+export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, currentStep })
 {
   const onSubmit = (values) => {
     //setFormValues(values);
