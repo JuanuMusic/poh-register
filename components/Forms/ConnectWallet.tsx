@@ -93,10 +93,12 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
                   <div >
                     <HelpOutlineIcon style={{color:"#E5E5E5", width: "42px", height: "63px"}}/>
                   </div>  
-                  <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
-                  <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText>
-                  <button style={{backgroundColor:"transparent", position: "relative", left: "413px", top: "-40px"}}>
-                  <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px", position: "relative"}}/> 
+                  <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
+                    <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
+                    <ListItemText  className={styles.learnConnect}>Click here to learn how to create a wallet</ListItemText>
+                  </div>
+                  <button style={{backgroundColor:"transparent"}}>
+                    <ArrowForwardIcon style={{color: "#FF9900", width: "16px", height: "15px", position: "relative"}}/> 
                   </button>
                 {/* <Button
                     onClick={handleClickOpen}
