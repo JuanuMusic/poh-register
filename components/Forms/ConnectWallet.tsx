@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Image from 'next/image';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import Box from '@mui/material/Box';
 // import { Link } from "react-router-dom";
 //Public
    
