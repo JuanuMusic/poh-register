@@ -85,7 +85,7 @@ const App = () => {
               <ListItem className={styles.container}  alignItems="flex-start">
 				  
 					<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
-						{formStep >= 0 && (
+						{formStep === 0 && (
 							<ConnectWallet
 								formStep={formStep}
 								nextFormStep={nextFormStep}
@@ -94,23 +94,23 @@ const App = () => {
 								logoutOfWeb3Modal={logoutOfWeb3Modal}
 							/>
 						)}
-						{formStep >= 1 && (
+						{formStep === 1 && (
 							<CreateProfile formStep={formStep} nextFormStep={nextFormStep} />
 						)}
-						{formStep >= 2 && (
+						{formStep === 2 && (
 							<UploadPhoto formStep={formStep} nextFormStep={nextFormStep} />
 						)}
-						{formStep >= 3 && (
+						{formStep === 3 && (
 							<UploadVideo formStep={formStep} nextFormStep={nextFormStep} />
 						)}
-						{formStep >= 4 && (
+						{formStep === 4 && (
 							<ReviewProfile formStep={formStep} nextFormStep={nextFormStep} />
 						)}
-						{formStep >= 5 && (
+						{formStep === 5 && (
 							<SubmitProfile formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 
-						{formStep > 4 && <FormCompleted />}
+						{formStep > 5 && <FormCompleted />}
 					</FormCard>
 			</ListItem>
     </Grid>

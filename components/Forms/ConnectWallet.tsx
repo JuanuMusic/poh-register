@@ -90,7 +90,7 @@ export default function ConnectWallet({ formStep, nextFormStep, provider, loadWe
               </Grid>
               <Grid item xs={12} md={12} >
                 <ListItem className={styles.connectWallet1}>
-                  <div style={{position: "fixed"}}>
+                  <div >
                     <HelpOutlineIcon style={{color:"#E5E5E5", width: "42px", height: "63px"}}/>
                   </div>  
                   <ListItemText  className={styles.needWallet}  >I need a wallet</ListItemText> 
