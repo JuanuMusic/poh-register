@@ -32,7 +32,7 @@ export default function WalletButton(props: {
   // }, [web3Provider, account]);
 
   return (
-    <Button
+    <Button 
       onClick={() => {
         console.log("TODO");
         //props.onClick && props.onClick();
@@ -42,18 +42,16 @@ export default function WalletButton(props: {
             props.logoutOfWeb3Modal();
           }
       }}
-      
       style={{
-        position: 'relative',
+        position: 'relative' ,
         color: 'black',
         textTransform: 'none',
         margin: 'auto',
-        left: '20px',
+        left: '5px',
         width: '-webkit-fill-available',
         top: '-16px',
         padding: 0,
-      }}
-    >
+      }}>
       {rendered === "" && "Already have a wallet"}
       {rendered !== "" && rendered}
       
