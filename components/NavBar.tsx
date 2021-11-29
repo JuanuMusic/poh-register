@@ -7,7 +7,7 @@ import { Web3Provider } from "@ethersproject/providers";
 import NavBreadCrumb from "./NavBreadCrumb";
 
 
-export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, currentStep })
+export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, formStep })
 {
   const onSubmit = (values) => {
     //setFormValues(values);
@@ -32,7 +32,7 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
           
         {/* } */}
       </ListItem> 
-      <NavBreadCrumb />
+      {formStep !== 0 && <NavBreadCrumb formStep={formStep} />}
     </div>
   );
 }

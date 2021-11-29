@@ -11,8 +11,9 @@ const steps = [
   'Preview',
 ];
 
-export default function HorizontalLabelPositionBelowStepper() {
+export default function HorizontalLabelPositionBelowStepper({currentStep }) {
   return (
+    
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={1} alternativeLabel>
         {steps.map((label) => (
