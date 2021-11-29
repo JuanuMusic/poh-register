@@ -4,6 +4,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
 import WalletButtonH from "../components/WalletButtonH";
 import { Web3Provider } from "@ethersproject/providers";
+import NavBreadCrumb from "./NavBreadCrumb";
+
 
 export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, step })
 {
@@ -14,7 +16,7 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
   
 
   return (
-    <div class="nav-bar-test">
+    <div >
       <Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31"    />
       <ListItem className={styles.NavConnect} >
         <ListItemText style={{color:"#979797", width: "310px"}}>Already Registered?
@@ -25,11 +27,12 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
       logoutOfWeb3Modal={logoutOfWeb3Modal}
                     /> </ListItemText>
 
-        {
-          step &&
-          <NavBreadCrumb step={step}></NavBreadCrumb>
-        }
+        {/* {
+          step && */}
+          
+        {/* } */}
       </ListItem> 
+      <NavBreadCrumb />
     </div>
   );
 }
