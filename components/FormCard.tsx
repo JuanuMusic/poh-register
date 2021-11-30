@@ -5,7 +5,7 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
   const { data } = useFormData();
 
   return (
-    <div >
+    <div>
       {currentStep < 5 && (
         <>
           {currentStep > 0 && (
@@ -14,11 +14,11 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
               onClick={prevFormStep}
               type="button"
             >
-              Back
+              Return
             </button>
           )}
 
-          {/* <span className={styles.steps}>Step {currentStep + 1}/5</span> */}
+         
         </>
       )}
       {children}

@@ -28,6 +28,14 @@ $border-radius-lg: 2rem;
   width: 310px;
 }
 
+// .MuiStepIcon-root {
+//   color: #FF9900 !important;
+// }
+
+// .MuiStepIcon-active {
+//   color: #FF9900 !important;
+// }
+
 .metmask {
   position: relative !important;
   top: 3px !important;
@@ -104,6 +112,20 @@ $border-radius-lg: 2rem;
     line-height: 33px;
     /* identical to box height */
     
+  }
+
+  .titlecmpProf {
+    margin-top: 40px;
+    display: block;
+    align-items: center;
+    position: static;
+    // width: 110px !important;
+    height: 33px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 525 !important;
+    font-size: 24px;
+    line-height: 33px;
   }
 
   .journey {
@@ -198,30 +220,100 @@ $border-radius-lg: 2rem;
     margin-bottom: 1rem;
   }
 
+  .dispName {
+    position: relative;
+    left: 121px;
+    top: 42px;
+    font-size: 14px;
+    font-family: Open sans, sans-serif;
+  }  
+
+  .shortBio {
+    position: relative;
+    left: 121px;
+    top: 89px;
+    font-size: 14px;
+    font-family: Open sans, sans-serif;
+  }
+
   label,
   input {
     font-family: 'Open Sans', sans-serif;
     color: $text-color;
   }
 
-  label {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
+  // label {
+  //   color: #CCCCCC;
+  //   top: 11px;
+  //   left: 10px;
+  //   position: relative;
+  //   font-size: 14px;
+  //   margin-bottom: 0.5rem;
+  // }
 
   input {
     font-family: 'Open Sans', sans-serif;
-    border: 2px solid rgba($primary-color, 0.8);
-    border-radius: $border-radius-lg;
+    border: none;
     padding: 0.5rem 1rem;
     padding-left: 1rem;
     font-size: 1rem;
+    width: 660px !important;
+    height: 45px;
+    top: 0px;
+    position: relative;
+    background: transparent;
   }
 
+  input.pdispName::placeholder {
+    color: #CCCCCC;
+    
+  }
+
+  input.pshortBio::placeholder {
+    color: #CCCCCC;
+    
+  }
   .formRow {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
+    position: relative !important;
+    top: 57px;
+    left: 120px;
+    height: 45px;
+    width: 660px !important;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  .formRowBio {
+    position: relative !important;
+    top: 106px;
+    left: 120px;
+    // margin-top: ;
+    width: 660px !important;
+    height: 132px !important;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  .btnSaCcmpProf {
+    top: 153px !important;
+    left: 445px !important;
+    width: 216px !important;
+    height: 45px !important;
+    position: relative !important;
+    background: linear-gradient(90deg, #FF9900 0%, #FFC700 100%);
+    border-radius: 300px;
+  }
+
+  .btnSaCcmpProf a {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    text-transform: none;
+    color: #FFFCF0;
   }
 
   .connect1 {
@@ -298,9 +390,21 @@ $border-radius-lg: 2rem;
   }
 
   button.back {
+    position: relative !important;
+    color: #FF9900;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    left: 232px;
+    top: 528px;
+    width: 184px;
+    height: 45px;
+    border: 1px solid #FF9900;
+    border-radius: 300px;
     margin-right: 1rem;
     padding: 0.3rem;
     cursor: pointer;
+    background-color: transparent;
   }
 
   .input-error {
@@ -339,7 +443,7 @@ $border-radius-lg: 2rem;
   .hideForm {
     display: none;
   }
-
+  
   // .showForm {
   //   display: block;
   //   background-color: "transparent";
