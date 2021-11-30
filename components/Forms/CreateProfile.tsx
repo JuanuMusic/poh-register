@@ -7,7 +7,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
-
+import Image from 'next/image';
 
 export default function CreateProfile({ formStep, nextFormStep, prevFormStep, currentStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -57,7 +57,11 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep, cu
                         )}
                     </>
                   )} */}
-                  <Button  className={styles.btnSaCcmpProf} type="submit" > <a>Save & Complete</a>
+                  <Button  className={styles.btnSaCcmpProf} type="submit" >
+                    <div className={styles.btnSave}>
+                      <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
+                    </div>
+                    <a>Save & Continue</a>
                   </Button>
                   
                 </div>

@@ -82,7 +82,11 @@ $border-radius-lg: 2rem;
   box-sizing: border-box;
 }
 
-
+.btnSave {
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
 
 .container {
   // padding: 3rem;
