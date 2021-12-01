@@ -272,9 +272,13 @@ $border-radius-lg: 2rem;
     
   }
 
-  input.pshortBio::placeholder {
+  textarea.pshortBio::placeholder {
+    position: relative;
+    top: 10px;
+    left: 15px;
     color: #CCCCCC;
-    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
   }
   .formRow {
     position: relative !important;

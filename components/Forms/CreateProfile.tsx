@@ -45,7 +45,7 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep, cu
                 <a className={styles.shortBio}>Short Bio</a>
                 <div className={styles.formRowBio}>
                   {/* <label htmlFor="bio">short bio(ex: Cypherpunk, smart contract developer)</label> */}
-                  <input className={styles.pshortBio} placeholder="short bio(ex: Cypherpunk, smart contract developer)" style={{height: "132px"}} type="text" {...register("bio")} />
+                  <textarea className={styles.pshortBio} placeholder="short bio(ex: Cypherpunk, smart contract developer)" style={{height: "130px", width: "658px", border: "none", resize: "none"}}  {...register("bio")} />
                 </div>
                 <div>
                 {/* {currentStep < 5 && (
