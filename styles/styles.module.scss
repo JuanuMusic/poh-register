@@ -272,10 +272,22 @@ $border-radius-lg: 2rem;
     
   }
 
+  textarea {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    padding: 0.5rem 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    width: 660px !important;
+    height: 45px;
+    top: 0px;
+    position: relative;
+    background: transparent;
+  }
+
   textarea.pshortBio::placeholder {
     position: relative;
-    top: 10px;
-    left: 15px;
+    top: 5px;
     color: #CCCCCC;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
