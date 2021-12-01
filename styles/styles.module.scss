@@ -28,13 +28,11 @@ $border-radius-lg: 2rem;
   width: 310px;
 }
 
-// .MuiStepIcon-root {
-//   color: #FF9900 !important;
+// .StepCrPf {
+//   position: relative !important;
+//   top: -93px !important; 
 // }
 
-// .MuiStepIcon-active {
-//   color: #FF9900 !important;
-// }
 
 .metmask {
   position: relative !important;
@@ -122,7 +120,8 @@ $border-radius-lg: 2rem;
     margin-top: 40px;
     display: block;
     align-items: center;
-    position: static;
+    position: relative;
+    top: -72px; 
     // width: 110px !important;
     height: 33px;
     font-family: 'Open Sans', sans-serif;
@@ -227,7 +226,7 @@ $border-radius-lg: 2rem;
   .dispName {
     position: relative;
     left: 121px;
-    top: 42px;
+    top: -70px;
     font-size: 14px;
     font-family: Open sans, sans-serif;
   }  
@@ -235,7 +234,7 @@ $border-radius-lg: 2rem;
   .shortBio {
     position: relative;
     left: 121px;
-    top: 89px;
+    top: -43px;
     font-size: 14px;
     font-family: Open sans, sans-serif;
   }
@@ -279,7 +278,7 @@ $border-radius-lg: 2rem;
   }
   .formRow {
     position: relative !important;
-    top: 57px;
+    top: -59px;
     left: 120px;
     height: 45px;
     width: 660px !important;
@@ -291,7 +290,7 @@ $border-radius-lg: 2rem;
 
   .formRowBio {
     position: relative !important;
-    top: 106px;
+    top: -29px;
     left: 120px;
     // margin-top: ;
     width: 660px !important;
@@ -303,7 +302,7 @@ $border-radius-lg: 2rem;
   }
 
   .btnSaCcmpProf {
-    top: 153px !important;
+    top: 13px !important;
     left: 445px !important;
     width: 216px !important;
     height: 45px !important;
@@ -334,7 +333,6 @@ $border-radius-lg: 2rem;
     border-radius: 3px;
   }
 
-  
   .chooseWallet {
     color: #979797;
     width: 264px;
@@ -375,6 +373,8 @@ $border-radius-lg: 2rem;
     color: rgba(0, 0, 0, 0.45);
   }
 
+  
+
   button:not(.back) {
     color: #0000;
     font-family: 'Open Sans', sans-serif;
@@ -400,7 +400,7 @@ $border-radius-lg: 2rem;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
     left: 232px;
-    top: 528px;
+    top: 411px;
     width: 184px;
     height: 45px;
     border: 1px solid #FF9900;
@@ -409,6 +409,7 @@ $border-radius-lg: 2rem;
     padding: 0.3rem;
     cursor: pointer;
     background-color: transparent;
+    z-index: 1;
   }
 
   .input-error {

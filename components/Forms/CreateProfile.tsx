@@ -8,18 +8,22 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
+import StepCrPf from "../StepCrPf";
 
 export default function CreateProfile({ formStep, nextFormStep, prevFormStep, currentStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
-
+    
   const onSubmit = (values) => {
     setFormValues(values);
     nextFormStep();
   };
   
+
+
   return (
     <List>
+      <StepCrPf  />
       <Grid container spacing={1}
           variant="fullWidth"
           direction="row"

@@ -4,16 +4,24 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
 import WalletButtonH from "../components/WalletButtonH";
 import { Web3Provider } from "@ethersproject/providers";
-import NavBreadCrumb from "./NavBreadCrumb";
+// import StepCon from "./StepCon";
 
 
 export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOfWeb3Modal, formStep })
 {
-  const onSubmit = (values) => {
-    //setFormValues(values);
-    nextFormStep();
-  }; 
-  
+  // const [completed, setCompleted] = React.useState<{
+  //   [k: number]: boolean;
+  // }>({});
+  // const onSubmit = (values) => {
+  //   //setFormValues(values);
+  //   nextFormStep();
+  // }; 
+  const handleComplete = () => {
+    const newCompleted = completed;
+    newCompleted[activeStep] = true;
+    setCompleted(newCompleted);
+    handleNext();
+  };
 
   return (
     <div >
@@ -32,7 +40,7 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
           
         {/* } */}
       </ListItem> 
-      {formStep !== 0 && <NavBreadCrumb formStep={formStep} />}
+      {/* {formStep !== 0 && <NavBreadCrumb activeStep={formStep}  />} */}
     </div>
   );
 }
