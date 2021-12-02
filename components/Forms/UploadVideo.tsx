@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/styles.module.scss";
 import { useFormData } from "../../context";
 import { useForm } from "react-hook-form";
@@ -8,6 +9,10 @@ import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepUpVd from "../../components/StepUpVd";
+import "../../node_modules/video-react/dist/video-react.css";
+import { Player } from "video-react";
+
+
 
 export default function UploadVideo({ formStep, nextFormStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -17,6 +22,15 @@ export default function UploadVideo({ formStep, nextFormStep }) {
     setFormValues(values);
     nextFormStep();
   };
+  const [videoSrc , setVideoSrc] = useState("");
+
+  const handleChange = (event) => {
+    console.log(event);
+    const file = event.currentTarget.files[0]
+    console.log(file, "file")
+    let url = URL.createObjectURL(file.originFileObj);
+    setVideoSrc(url);
+};
 
   return (
     <List>
@@ -58,11 +72,26 @@ export default function UploadVideo({ formStep, nextFormStep }) {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className={styles.formRow}>
                     <label htmlFor="video">Address</label>
-                    <input type="file" {...register("video")} />
+                    <input
+                            {...register("video")}
+                            accept="video/mp4, video/mov"
+                            onChange={handleChange}
+                            type="file"
+                      />
+                    
                   </div>
                   <button type="submit">
                     Next
                   </button>
+                  {/* a_ guardarlo en una variable b_  */}
+                  <Player
+                        playsInline
+                        src={videoSrc}
+                        fluid={false}
+                        width={870}
+                        height={442}
+                    />
+                    <video controls src={videoSrc} />
                 </form>
       </Grid>
     </List>
