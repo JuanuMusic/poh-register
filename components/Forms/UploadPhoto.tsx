@@ -52,23 +52,50 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
                   <ListItemText disableTypography className={styles.titlecmpProf}>Upload Photo</ListItemText>
                 </ListItem>
               </Grid>
-              <Grid className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
+              <Grid container spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
                 <ul>
                   <li style={{fontSize: "16px", color: "#979797"}}>Make sure you are facing the camera</li>
-                  <Image src="/images/validjrag.png" alt="v" width="99" height="96"/>
-                  <CheckCircleIcon style={{color: "#00C42B"}} />
-                  <Image src="/images/invalidsideprof.png" alt="i" width="99" height="96"/>
-                  <CancelIcon style={{color: "#F60C36"}}/>
-
-                  <li style={{fontSize: "16px", color: "#979797"}}>All facial features must be visible</li>
-                  <Image src="/images/validpinkcoat.png" alt="v" width="99" height="96"/> 
-                  <CheckCircleIcon style={{color: "#00C42B"}} />
-                  <Image src="/images/invalidcoveredblackcoat.png" alt="i" width="99" height="96"/>
-                  <CancelIcon style={{color: "#F60C36"}}/>
-                  <Image src="/images/validfrontglassesnonreflect.png" alt="v" width="99" height="96"/>
-                  <CheckCircleIcon style={{color: "#00C42B"}} />
-                  <Image src="/images/invalidglassesreflect.png" alt="i" width="99" height="96"/>
-                  <CancelIcon style={{color: "#F60C36"}}/>
+                  <Grid container spacing={2}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center" 
+                        style={{position: "relative", left: "124px"}}>
+                    <Grid direction="column"
+                          justifyContent="center"
+                          alignItems="center">
+                      <Image src="/images/validjrag.png" alt="v" width="99" height="96"/>
+                      <CheckCircleIcon style={{color: "#00C42B"}} />
+                    </Grid>
+                    <Grid direction="column"
+                        justifyContent="center"
+                        alignItems="center">
+                      <Image src="/images/invalidsideprof.png" alt="i" width="99" height="96"/>
+                      <CancelIcon style={{color: "#F60C36"}}/>
+                    </Grid>
+                  </Grid>
+                  <Grid container spacing={2}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center" 
+                        style={{position: "relative", left: "408px"}}>
+                    <li style={{fontSize: "16px", color: "#979797"}}>All facial features must be visible</li>
+                    <ListItem>
+                      <Image src="/images/validpinkcoat.png" alt="v" width="99" height="96"/> 
+                      <CheckCircleIcon style={{color: "#00C42B"}} />
+                    </ListItem>
+                    <ListItem>
+                      <Image src="/images/invalidcoveredblackcoat.png" alt="i" width="99" height="96"/>
+                      <CancelIcon style={{color: "#F60C36"}}/>
+                    </ListItem>
+                    <ListItem>
+                      <Image src="/images/validfrontglassesnonreflect.png" alt="v" width="99" height="96"/>
+                      <CheckCircleIcon style={{color: "#00C42B"}} />
+                    </ListItem>
+                    <ListItem>
+                      <Image src="/images/invalidglassesreflect.png" alt="i" width="99" height="96"/>
+                      <CancelIcon style={{color: "#F60C36"}}/>
+                    </ListItem>
+                  </Grid>
                 </ul>
                 
                 <form onSubmit={handleSubmit(onSubmit)}>
