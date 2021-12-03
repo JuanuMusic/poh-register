@@ -351,6 +351,16 @@ $border-radius-lg: 2rem;
     border-radius: 3px;
   }
 
+  .dragndrop {
+    position: relative;
+    width: 855px;
+    height: 95px;
+    background: #FFFFFF;
+    border: 1px dashed #FF9900;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
   .chooseWallet {
     color: #979797;
     width: 264px;

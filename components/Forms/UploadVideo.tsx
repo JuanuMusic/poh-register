@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepUpVd from "../../components/StepUpVd";
 import "../../node_modules/video-react/dist/video-react.css";
-import { Player } from "video-react";
+
 
 
 
@@ -22,15 +22,7 @@ export default function UploadVideo({ formStep, nextFormStep }) {
     setFormValues(values);
     nextFormStep();
   };
-  const [videoSrc , setVideoSrc] = useState("");
-
-  const handleChange = (event) => {
-    console.log(event);
-    const file = event.currentTarget.files[0]
-    console.log(file, "file")
-    let url = URL.createObjectURL(file.originFileObj);
-    setVideoSrc(url);
-};
+  
 
   return (
     <List>
@@ -72,26 +64,13 @@ export default function UploadVideo({ formStep, nextFormStep }) {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className={styles.formRow}>
                     <label htmlFor="video">Address</label>
-                    <input
-                            {...register("video")}
-                            accept="video/mp4, video/mov"
-                            onChange={handleChange}
-                            type="file"
-                      />
-                    
+                    <input type="file"  {...register("video")}/>
                   </div>
                   <button type="submit">
                     Next
                   </button>
                   {/* a_ guardarlo en una variable b_  */}
-                  <Player
-                        playsInline
-                        src={videoSrc}
-                        fluid={false}
-                        width={870}
-                        height={442}
-                    />
-                    <video controls src={videoSrc} />
+                  
                 </form>
       </Grid>
     </List>
