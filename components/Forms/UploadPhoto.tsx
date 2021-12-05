@@ -54,21 +54,23 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
               </Grid>
               <Grid container spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
                 <ul>
-                  <li style={{fontSize: "16px", color: "#979797"}}>Make sure you are facing the camera</li>
+                  <li style={{fontSize: "16px", color: "#979797", justifyContent: "center", position:"relative", display:"flex", top:"-20px", left: "41px"}}>Make sure you are facing the camera</li>
                   <Grid container spacing={2}
                         direction="row"
                         justifyContent="center"
                         alignItems="center" 
-                        style={{position: "relative", left: "124px"}}>
+                        style={{position: "relative", left: "124px", marginBottom: "20px"}}>
                     <Grid direction="column"
                           justifyContent="center"
-                          alignItems="center">
+                          alignItems="center"
+                          style={{display:"flex", left: "-86px", position: "relative"}}>
                       <Image src="/images/validjrag.png" alt="v" width="99" height="96"/>
                       <CheckCircleIcon style={{color: "#00C42B"}} />
                     </Grid>
                     <Grid direction="column"
                         justifyContent="center"
-                        alignItems="center">
+                        alignItems="center"
+                        style={{display:"flex", left: "--70px", position: "relative"}}>
                       <Image src="/images/invalidsideprof.png" alt="i" width="99" height="96"/>
                       <CancelIcon style={{color: "#F60C36"}}/>
                     </Grid>
