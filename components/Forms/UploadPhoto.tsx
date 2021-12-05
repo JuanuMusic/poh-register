@@ -13,7 +13,7 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { useDropzone } from "react-dropzone";
 
-export default function UploadPhoto({ formStep, nextFormStep }) {
+export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
 
@@ -47,13 +47,13 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
             direction="row"
             justifyContent="center"
             alignItems="flex-start" style={{marginTop: '4px'}}>
-              <Grid direction="row" item xs={12} md={12}>
+              
                 <ListItem style={{flexDirection: 'column'}}>
                   <ListItemText disableTypography className={styles.titlecmpProf}>Upload Photo</ListItemText>
                 </ListItem>
-              </Grid>
+              
               <Grid container spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
-                <ul>
+                <ul style={{position: "relative", left: "253px"}}>
                   <li style={{fontSize: "16px", color: "#979797", justifyContent: "center", position:"relative", display:"flex", top:"-20px", left: "41px"}}>Make sure you are facing the camera</li>
                   <Grid container spacing={2}
                         direction="row"
@@ -67,36 +67,49 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
                       <Image src="/images/validjrag.png" alt="v" width="99" height="96"/>
                       <CheckCircleIcon style={{color: "#00C42B"}} />
                     </Grid>
+                   
                     <Grid direction="column"
                         justifyContent="center"
                         alignItems="center"
-                        style={{display:"flex", left: "--70px", position: "relative"}}>
+                        style={{display:"flex", left: "-70px", position: "relative"}}>
                       <Image src="/images/invalidsideprof.png" alt="i" width="99" height="96"/>
                       <CancelIcon style={{color: "#F60C36"}}/>
                     </Grid>
                   </Grid>
-                  <Grid container spacing={2}
+                    <li style={{fontSize: "16px", color: "#979797", position:"relative", left: "119px"}}>All facial features must be visible</li>
+                    <Grid container spacing={2}
                         direction="row"
                         justifyContent="center"
                         alignItems="center" 
-                        style={{position: "relative", left: "408px"}}>
-                    <li style={{fontSize: "16px", color: "#979797"}}>All facial features must be visible</li>
-                    <ListItem>
-                      <Image src="/images/validpinkcoat.png" alt="v" width="99" height="96"/> 
-                      <CheckCircleIcon style={{color: "#00C42B"}} />
-                    </ListItem>
-                    <ListItem>
+                        style={{position: "relative", display:"flex", marginTop:"15px"}}>
+                          <Grid direction="column"
+                                justifyContent="center"
+                                alignItems="center"
+                                style={{display:"flex", left: "0px", position: "relative"}}>
+                                  <Image src="/images/validpinkcoat.png" alt="v" width="99" height="96"/> 
+                                  <CheckCircleIcon style={{color: "#00C42B"}} />
+                          </Grid>
+                          <Grid direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        style={{display:"flex", left: "15px", position: "relative"}}>
                       <Image src="/images/invalidcoveredblackcoat.png" alt="i" width="99" height="96"/>
                       <CancelIcon style={{color: "#F60C36"}}/>
-                    </ListItem>
-                    <ListItem>
+                    </Grid>
+                    <Grid direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        style={{display:"flex", left: "30px", position: "relative"}}>
                       <Image src="/images/validfrontglassesnonreflect.png" alt="v" width="99" height="96"/>
                       <CheckCircleIcon style={{color: "#00C42B"}} />
-                    </ListItem>
-                    <ListItem>
+                    </Grid>
+                    <Grid direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        style={{display:"flex", left: "45px", position: "relative"}}>
                       <Image src="/images/invalidglassesreflect.png" alt="i" width="99" height="96"/>
                       <CancelIcon style={{color: "#F60C36"}}/>
-                    </ListItem>
+                    </Grid>
                   </Grid>
                 </ul>
                 
@@ -117,6 +130,7 @@ export default function UploadPhoto({ formStep, nextFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
+                  
                   <Button  className={styles.btnSaCcmpProf} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>

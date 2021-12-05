@@ -86,6 +86,26 @@ $border-radius-lg: 2rem;
   top: 1px;
 }
 
+// .backUpPh {
+//   position: relative !important;
+//   color: #FF9900;
+//   font-size: 16px;
+//   font-weight: 400;
+//   font-family: "Open Sans", sans-serif;
+//   left: 232px;
+//   top: 596px;
+//   width: 184px;
+//   height: 45px;
+//   border: 1px solid #FF9900;
+//   border-radius: 300px;
+//   margin-right: 1rem;
+//   padding: 0.3rem;
+//   cursor: pointer;
+//   background-color: transparent;
+//   z-index: 1;
+// }
+
+
 .container {
   // padding: 3rem;
   
@@ -439,7 +459,8 @@ $border-radius-lg: 2rem;
     background-color: transparent;
     z-index: 1;
   }
-
+  
+  
   .input-error {
     border-color: $error-color;
   }

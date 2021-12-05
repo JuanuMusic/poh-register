@@ -9,7 +9,7 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
       {currentStep < 5 && (
         <>
           {currentStep > 0 && (
-            <button
+            <button 
               className={styles.back}
               onClick={prevFormStep}
               type="button"
