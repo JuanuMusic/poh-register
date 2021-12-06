@@ -53,7 +53,7 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                 </ListItem>
               
               <Grid container spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
-                <ul style={{position: "relative", left: "253px"}}>
+                <ul style={{position: "relative", left: "580px"}}>
                   <li style={{fontSize: "16px", color: "#979797", justifyContent: "center", position:"relative", display:"flex", top:"-20px", left: "41px"}}>Make sure you are facing the camera</li>
                   <Grid container spacing={2}
                         direction="row"
@@ -113,15 +113,15 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                   </Grid>
                 </ul>
                 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form style={{position: "relative", display: "flex", top: "317px"}} onSubmit={handleSubmit(onSubmit)}>
                   <div {...getRootProps()}>
                   {/* <input type="file" {...register("photo")}/> */}
                    <input  {...getInputProps()}   />
                     
                     <p className={styles.dragndrop}>
-                      <ListItemText>Browse your file </ListItemText>
-                      <ListItemText>(Max Size: XMB | PNG or JPG) </ListItemText>
-                      <ListItemText>Drag your file or click here. </ListItemText>
+                      <ListItemText disableTypography style={{display: "flex", justifyContent: "center", fontWeight:"600", fontFamily: "Open Sans, sans-serif", marginTop: "15px"}}>Browse your file </ListItemText>
+                      <ListItemText disableTypography style={{display: "flex", justifyContent: "center", fontFamily: "Open Sans, sans-serif" }}>(Max Size: XMB | PNG or JPG) </ListItemText>
+                      <ListItemText disableTypography style={{display: "flex", justifyContent: "center", fontFamily: "Open Sans, sans-serif" }}>Drag your file or click here. </ListItemText>
                     </p>
                      
                   </div>
@@ -131,7 +131,7 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                     <input type="file" {...register("photo")} />
                   </div> */}
                   
-                  <Button  className={styles.btnSaCcmpProf} type="submit" >
+                  <Button  className={styles.btnSaUpPh} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
                     </div>

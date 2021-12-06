@@ -10,7 +10,7 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
         <>
           {currentStep > 0 && (
             <button 
-              className={styles.back}
+            className={`${styles.back} ${currentStep === 2 ? styles.active : ''}`}
               onClick={prevFormStep}
               type="button"
             >
@@ -24,7 +24,8 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
       {children}
       {/* <hr style={{margin: "2rem 0;"}} /> */}
       {/* <h3>Profile Data</h3> */}
-      <ul>
+      {/*  remove style display none in "ul" below to display the data */}
+      <ul style={{display: "none"}}>
       {
         Object.keys(data).map((key, i) => {
           if (typeof(data[key]) === 'object' && data[key][0] != null) {

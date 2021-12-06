@@ -189,6 +189,15 @@ $border-radius-lg: 2rem;
     color: #000000;
   }
 
+  .stepPh {
+    position: relative;
+    width: 846px !important;
+    display: flex !important;
+    left: 355px !important;
+    justify-content: center !important;
+    top: -93px;
+  }
+
   .learnConnect {
     color: #979797;
     width: 264px;
@@ -340,8 +349,9 @@ $border-radius-lg: 2rem;
   }
 
   .btnSaCcmpProf {
-    top: 13px !important;
-    left: 445px !important;
+    display: flex;
+    top: 14px !important;
+    left: 470px !important;
     width: 216px !important;
     height: 45px !important;
     position: relative !important;
@@ -356,6 +366,26 @@ $border-radius-lg: 2rem;
     text-transform: none;
     color: #FFFCF0;
   }
+
+  .btnSaUpPh {
+    display: flex;
+    top: 110px !important;
+    left: -408px !important;
+    width: 216px !important;
+    height: 45px !important;
+    position: relative !important;
+    background: linear-gradient(90deg, #FF9900 0%, #FFC700 100%);
+    border-radius: 300px;
+  }
+  .btnSaUpPh a {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    text-transform: none;
+    color: #FFFCF0;
+  }
+  
+  
 
   .connect1 {
     background: #FFFFFF;
@@ -460,6 +490,25 @@ $border-radius-lg: 2rem;
     z-index: 1;
   }
   
+  button.active {
+
+    position: relative !important;
+    color: #FF9900;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    left: 612px;
+    top: 596px;
+    width: 184px;
+    height: 45px;
+    border: 1px solid #FF9900;
+    border-radius: 300px;
+    margin-right: 1rem;
+    padding: 0.3rem;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1;
+  }
   
   .input-error {
     border-color: $error-color;

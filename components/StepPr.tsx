@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from "../styles/styles.module.scss";
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Stepper from '@mui/material/Stepper';
