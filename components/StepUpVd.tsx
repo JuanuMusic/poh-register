@@ -76,7 +76,7 @@ const steps = ['Create Profile',
 
 export default function CustomizedSteppers() {
   return (
-    <Stack sx={{ width: '100%' , position: 'relative', top: '-93px' }} spacing={4}>
+    <Stack className={styles.stepPv} spacing={4}>
       <Stepper  activeStep={2} connector={<QontoConnector />}>
         {steps.map((label) => (
           <Step key={label}>

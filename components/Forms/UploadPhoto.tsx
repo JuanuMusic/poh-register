@@ -59,7 +59,7 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                         direction="row"
                         justifyContent="center"
                         alignItems="center" 
-                        style={{position: "relative", left: "124px", marginBottom: "20px"}}>
+                        style={{position: "relative", left: "117px", marginBottom: "20px"}}>
                     <Grid direction="column"
                           justifyContent="center"
                           alignItems="center"

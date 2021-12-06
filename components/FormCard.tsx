@@ -10,7 +10,7 @@ export default function FormCard({ children, currentStep, prevFormStep }) {
         <>
           {currentStep > 0 && (
             <button 
-            className={`${styles.back} ${currentStep === 2 ? styles.active : ''}`}
+            className={`${styles.back} ${currentStep === 2 ? styles.active : ''} ${currentStep === 3 ? styles.activeUpVd : ''}`}
               onClick={prevFormStep}
               type="button"
             >
