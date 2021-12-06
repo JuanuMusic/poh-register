@@ -149,6 +149,7 @@ $border-radius-lg: 2rem;
     font-weight: 525 !important;
     font-size: 24px;
     line-height: 33px;
+    color: black;
   }
 
   .journey {
@@ -202,7 +203,7 @@ $border-radius-lg: 2rem;
     position: relative;
     width: 846px !important;
     display: flex !important;
-    left: 355px !important;
+    left: 500px !important;
     justify-content: center !important;
     top: -93px;
   }
@@ -261,6 +262,14 @@ $border-radius-lg: 2rem;
     font-family: 'Open Sans', sans-serif;
     color: $text-color;
     margin-bottom: 1rem;
+    font-size: 16px;
+  }
+
+  li {
+    font-family: 'Open Sans', sans-serif;
+    text-indent: 5px;
+    color: #979797;
+    line-height: 22px;
   }
 
   .dispName {
@@ -542,7 +551,7 @@ $border-radius-lg: 2rem;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
     left: 695px;
-    top: 680px;
+    top: 753px;
     width: 184px;
     height: 45px;
     border: 1px solid #FF9900;
