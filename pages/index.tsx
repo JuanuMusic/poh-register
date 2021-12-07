@@ -95,16 +95,16 @@ const App = () => {
 							/>
 						)}
 						{formStep === 1 && (
-							<CreateProfile formStep={formStep} nextFormStep={nextFormStep} />
+							<CreateProfile prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 						{formStep === 2 && (
-							<UploadPhoto formStep={formStep} nextFormStep={nextFormStep} />
+							<UploadPhoto prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 						{formStep === 3 && (
-							<UploadVideo formStep={formStep} nextFormStep={nextFormStep} />
+							<UploadVideo prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 						{formStep === 4 && (
-							<ReviewProfile formStep={formStep} nextFormStep={nextFormStep} />
+							<ReviewProfile prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 						{formStep === 5 && (
 							<SubmitProfile formStep={formStep} nextFormStep={nextFormStep} />

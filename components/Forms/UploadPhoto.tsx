@@ -11,6 +11,7 @@ import Image from 'next/image';
 import StepUpPh from "../../components/StepUpPh";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
+import ReturnBtn from "./ReturnBtn";
 import { useDropzone } from "react-dropzone";
 
 export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
@@ -52,8 +53,8 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                   <ListItemText disableTypography className={styles.titlecmpProf}>Upload Photo</ListItemText>
                 </ListItem>
               
-              <Grid container spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
-                <ul style={{position: "relative", left: "580px"}}>
+              <Grid container style={{flexDirection: 'column'}} spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
+                <ul>
                   <li style={{fontSize: "16px", color: "#979797", justifyContent: "center", position:"relative", display:"flex", top:"-20px", left: "41px"}}>Make sure you are facing the camera</li>
                   <Grid container spacing={2}
                         direction="row"
@@ -113,7 +114,7 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                   </Grid>
                 </ul>
                 
-                <form style={{position: "relative", display: "flex", top: "317px"}} onSubmit={handleSubmit(onSubmit)}>
+                <form style={{display: "block", marginBottom: '1rem'}} onSubmit={handleSubmit(onSubmit)}>
                   <div {...getRootProps()}>
                   {/* <input type="file" {...register("photo")}/> */}
                    <input  {...getInputProps()}   />
@@ -130,15 +131,16 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                  
-                  <Button  className={styles.btnSaUpPh} type="submit" >
+                </form>
+                <div className={styles.ctaSection}>
+                  <Button className={styles.btnSaUpPh} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
                     </div>
                     <a>Save & Continue</a>
                   </Button>
-                </form>
-                
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
+                </div>
               </Grid>  
         </Grid>
     </List>

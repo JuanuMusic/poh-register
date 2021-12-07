@@ -7,9 +7,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
+import ReturnBtn from "./ReturnBtn";
 import StepPr from "../../components/StepPr";
 
-export default function ReviewProfile({ formStep, nextFormStep }) {
+export default function ReviewProfile({ formStep, nextFormStep, prevFormStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
 
@@ -58,11 +59,13 @@ export default function ReviewProfile({ formStep, nextFormStep }) {
                       I confirm that my picture and video submissions meet all the requirements.
                     </label>
                   </div>
-
+                </form>
+                <div className={styles.ctaSection}>
                   <button type="submit">
                     Next
                   </button>
-                </form>
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
+                </div>
       </Grid>
     </List>
   );

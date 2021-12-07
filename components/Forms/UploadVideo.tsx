@@ -9,12 +9,13 @@ import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepUpVd from "../../components/StepUpVd";
+import ReturnBtn from "./ReturnBtn";
 import "../../node_modules/video-react/dist/video-react.css";
 import { useDropzone } from "react-dropzone";
 
 
 
-export default function UploadVideo({ formStep, nextFormStep }) {
+export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
 
@@ -100,14 +101,16 @@ export default function UploadVideo({ formStep, nextFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                  
-                  <Button  className={styles.btnSaUpVd} type="submit" >
+                </form>
+                <div className={styles.ctaSection}>
+                  <Button className={styles.btnSaUpVd} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
                     </div>
                     <a>Save & Continue</a>
                   </Button>
-                </form>
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
+                </div>
 
                 {/* <form onSubmit={handleSubmit(onSubmit)}>
                   <div className={styles.formRow}>

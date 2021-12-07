@@ -9,8 +9,9 @@ import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepCrPf from "../StepCrPf";
+import ReturnBtn from "./ReturnBtn";
 
-export default function CreateProfile({ formStep, nextFormStep, prevFormStep, currentStep }) {
+export default function CreateProfile({ formStep, nextFormStep, prevFormStep }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { setFormValues } = useFormData();
     
@@ -47,7 +48,7 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep, cu
                   {/* <label htmlFor="bio">short bio(ex: Cypherpunk, smart contract developer)</label> */}
                   <textarea className={styles.pshortBio} placeholder="short bio(ex: Cypherpunk, smart contract developer)" style={{height: "130px", width: "658px", border: "none", resize: "none"}}  {...register("bio")} />
                 </div>
-                <div>
+                <div className={styles.ctaSection}>
                 {/* {currentStep < 5 && (
                    <>
                       {currentStep > 0 && (
@@ -67,7 +68,7 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep, cu
                     </div>
                     <a>Save & Continue</a>
                   </Button>
-                  
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
                 </div>
               </form>
             </Grid>

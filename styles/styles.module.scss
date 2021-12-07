@@ -341,6 +341,13 @@ $border-radius-lg: 2rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
   }
+  
+  .ctaSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .formRow {
     position: relative !important;
     top: -59px;
@@ -368,11 +375,8 @@ $border-radius-lg: 2rem;
 
   .btnSaCcmpProf {
     display: flex;
-    top: 14px !important;
-    left: 470px !important;
     width: 216px !important;
     height: 45px !important;
-    position: relative !important;
     background: linear-gradient(90deg, #FF9900 0%, #FFC700 100%);
     border-radius: 300px;
   }
@@ -387,11 +391,8 @@ $border-radius-lg: 2rem;
 
   .btnSaUpPh {
     display: flex;
-    top: 110px !important;
-    left: -408px !important;
     width: 216px !important;
     height: 45px !important;
-    position: relative !important;
     background: linear-gradient(90deg, #FF9900 0%, #FFC700 100%);
     border-radius: 300px;
   }
@@ -405,11 +406,8 @@ $border-radius-lg: 2rem;
   
   .btnSaUpVd {
     display: flex;
-    top: 110px !important;
-    // left: -408px !important;
     width: 216px !important;
     height: 45px !important;
-    position: relative !important;
     background: linear-gradient(90deg, #FF9900 0%, #FFC700 100%);
     border-radius: 300px;
   }
@@ -495,8 +493,6 @@ $border-radius-lg: 2rem;
     font-family: 'Open Sans', sans-serif;
     // width: 100%;
     font-size: 16px;
-    left: 62px;
-    top: -17px;
     // background: white;
     // border-radius: $border-radius-lg;
     border: none;
@@ -509,13 +505,10 @@ $border-radius-lg: 2rem;
   }
 
   button.back {
-    // position: relative !important;
     color: #FF9900;
     font-size: 16px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
-    left: 232px;
-    top: 411px;
     width: 184px;
     height: 45px;
     border: 1px solid #FF9900;
@@ -524,18 +517,14 @@ $border-radius-lg: 2rem;
     padding: 0.3rem;
     cursor: pointer;
     background-color: transparent;
-    z-index: 1;
+    margin-left: 1rem;
   }
   
   button.active {
-
-    // position: relative !important;
     color: #FF9900;
     font-size: 16px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
-    left: 612px;
-    top: 596px;
     width: 184px;
     height: 45px;
     border: 1px solid #FF9900;
