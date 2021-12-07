@@ -192,7 +192,7 @@ $border-radius-lg: 2rem;
 
   .stepPh {
     position: relative;
-    width: 846px !important;
+    max-width: 846px;
     display: flex !important;
     left: 355px !important;
     justify-content: center !important;
@@ -200,12 +200,12 @@ $border-radius-lg: 2rem;
   }
 
   .stepPv {
-    position: relative;
-    width: 846px !important;
-    display: flex !important;
-    left: 500px !important;
-    justify-content: center !important;
-    top: -93px;
+    // position: relative;
+    max-width: 846px;
+    display: flex;
+    // left: 500px !important;
+    justify-content: center;
+    // top: -93px;
   }
 
   .learnConnect {
@@ -406,7 +406,7 @@ $border-radius-lg: 2rem;
   .btnSaUpVd {
     display: flex;
     top: 110px !important;
-    left: -408px !important;
+    // left: -408px !important;
     width: 216px !important;
     height: 45px !important;
     position: relative !important;
@@ -437,8 +437,10 @@ $border-radius-lg: 2rem;
   }
 
   .dragndrop {
-    position: relative;
-    width: 855px;
+    // position: relative;
+
+    max-width: 855px;
+    width: 100%;
     height: 95px;
     background: #FFFFFF;
     border: 1px dashed #FF9900;
@@ -507,7 +509,7 @@ $border-radius-lg: 2rem;
   }
 
   button.back {
-    position: relative !important;
+    // position: relative !important;
     color: #FF9900;
     font-size: 16px;
     font-weight: 400;
@@ -527,7 +529,7 @@ $border-radius-lg: 2rem;
   
   button.active {
 
-    position: relative !important;
+    // position: relative !important;
     color: #FF9900;
     font-size: 16px;
     font-weight: 400;
@@ -545,13 +547,13 @@ $border-radius-lg: 2rem;
     z-index: 1;
   }
   button.activeUpVd {
-    position: relative !important;
+    // position: relative !important;
     color: #FF9900;
     font-size: 16px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
-    left: 695px;
-    top: 753px;
+    // left: 695px;
+    // top: 753px;
     width: 184px;
     height: 45px;
     border: 1px solid #FF9900;
