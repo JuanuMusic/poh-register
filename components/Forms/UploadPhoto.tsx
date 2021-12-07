@@ -41,18 +41,20 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
 
   return (
     <List>
-    <StepUpPh />
+      <div >
+        <StepUpPh />
+      </div>  
     
       <Grid container spacing={1}
             variant="fullWidth"
             direction="row"
             justifyContent="center"
             alignItems="flex-start" style={{marginTop: '4px'}}>
-              
+              <Grid direction="row" item xs={12} md={12}>
                 <ListItem style={{flexDirection: 'column'}}>
                   <ListItemText disableTypography className={styles.titlecmpProf}>Upload Photo</ListItemText>
                 </ListItem>
-              
+              </Grid>
               <Grid container style={{flexDirection: 'column'}} spacing={2} className={formStep === 2 ? styles.showForm : styles.hideForm} item xs={12} md={12}>
                 <ul>
                   <li style={{fontSize: "16px", color: "#979797", justifyContent: "center", position:"relative", display:"flex", top:"-20px", left: "41px"}}>Make sure you are facing the camera</li>
@@ -77,7 +79,7 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                       <CancelIcon style={{color: "#F60C36"}}/>
                     </Grid>
                   </Grid>
-                    <li style={{fontSize: "16px", color: "#979797", position:"relative", left: "119px"}}>All facial features must be visible</li>
+                    <li style={{fontSize: "16px", color: "#979797", position:"relative", display: "flex", justifyContent: "center"}}>All facial features must be visible</li>
                     <Grid container spacing={2}
                         direction="row"
                         justifyContent="center"

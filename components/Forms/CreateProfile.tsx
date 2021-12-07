@@ -24,7 +24,9 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep }) 
 
   return (
     <List>
-      <StepCrPf  />
+      <div >
+        <StepCrPf  />
+      </div>  
       <Grid container spacing={1}
           variant="fullWidth"
           direction="row"

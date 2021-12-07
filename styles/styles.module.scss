@@ -28,10 +28,7 @@ $border-radius-lg: 2rem;
   width: 310px;
 }
 
-// .StepCrPf {
-//   position: relative !important;
-//   top: -93px !important; 
-// }
+
 
 
 .metmask {
@@ -190,22 +187,30 @@ $border-radius-lg: 2rem;
     color: #000000;
   }
 
-  .stepPh {
-    position: relative;
+  .StepCrPf {
     max-width: 846px;
-    display: flex !important;
-    left: 355px !important;
-    justify-content: center !important;
-    top: -93px;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    margin-bottom: 82px;
+    }
+
+  .stepPh {
+    margin-top: -30px;
+    margin-bottom: 82px;
+    max-width: 846px;
+    width: 100% !important;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    
   }
 
   .stepPv {
-    // position: relative;
     max-width: 846px;
     display: flex;
-    // left: 500px !important;
     justify-content: center;
-    // top: -93px;
+    
   }
 
   .learnConnect {
@@ -346,12 +351,15 @@ $border-radius-lg: 2rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 48px;
   }
 
   .formRow {
-    position: relative !important;
+    display: flex;
+    justify-content: center;
+    position: relative;
     top: -59px;
-    left: 120px;
+    left: 7.4rem;
     height: 45px;
     width: 660px !important;
     background: #FFFFFF;
@@ -361,9 +369,11 @@ $border-radius-lg: 2rem;
   }
 
   .formRowBio {
-    position: relative !important;
-    top: -29px;
-    left: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative ;
+    // top: -29px;
+    left: 7.4rem;
     // margin-top: ;
     width: 660px !important;
     height: 132px !important;
