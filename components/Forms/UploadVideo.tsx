@@ -101,17 +101,18 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                </form>
-                <div className={styles.ctaSection}>
-                  <Button className={styles.btnSaUpVd} type="submit" >
-                    <div className={styles.btnSave}>
-                      <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
-                    </div>
-                    <a>Save & Continue</a>
-                  </Button>
-                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
-                </div>
-
+                
+                  <div className={styles.ctaSection}>
+                    <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
+                    <Button className={styles.btnSaUpVd} type="submit" >
+                      <div className={styles.btnSave}>
+                        <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
+                      </div>
+                      <a>Save & Continue</a>
+                    </Button>
+                    
+                  </div>
+                </form>  
                 {/* <form onSubmit={handleSubmit(onSubmit)}>
                   <div className={styles.formRow}>
                     <label htmlFor="video">Address</label>

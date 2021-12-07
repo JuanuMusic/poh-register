@@ -62,13 +62,13 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep }) 
                         )}
                     </>
                   )} */}
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
                   <Button  className={styles.btnSaCcmpProf} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
                     </div>
                     <a>Save & Continue</a>
                   </Button>
-                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
                 </div>
               </form>
             </Grid>

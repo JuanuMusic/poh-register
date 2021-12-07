@@ -131,16 +131,18 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                </form>
+                
                 <div className={styles.ctaSection}>
+                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
                   <Button className={styles.btnSaUpPh} type="submit" >
                     <div className={styles.btnSave}>
                       <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
                     </div>
                     <a>Save & Continue</a>
                   </Button>
-                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
+                  
                 </div>
+                </form>
               </Grid>  
         </Grid>
     </List>
