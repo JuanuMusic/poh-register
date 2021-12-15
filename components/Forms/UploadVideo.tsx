@@ -58,7 +58,7 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                         direction="column"
                         justifyContent="center"
                         alignItems="center" 
-                        style={{flex: "inherit",display: "flex", width: "auto",alignItems: "flex-start"}}>
+                        style={{flex: "inherit",display: "flex", width: "auto",alignItems: "flex-start", flexDirection: 'column'}}>
                           <ListItemText disableTypography style={{display: "flex", justifyContent: "center", fontWeight:"600", fontFamily: "Open Sans, sans-serif", marginBottom: "15px"}}> Instructions to record the video: </ListItemText>
                           <ul>
                             <li>• The sign should display in a readble manner the full Ethereum address of the submitted (No ENS; no ellipsis)</li>
@@ -83,8 +83,8 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                             <li>• Minimum height: equal to or higher than 352 pixels</li>
                             <li>• Minimum width: equal to or higher than 352 pixels</li>
                           </ul>
-              </Grid>
-                <form style={{display: "flex"}} onSubmit={handleSubmit(onSubmit)}>
+              
+                <form style={{display: "flex", flexDirection: 'column' }} onSubmit={handleSubmit(onSubmit)}>
                   <div {...getRootProps()}>
                   {/* <input type="file" {...register("photo")}/> */}
                    <input  {...getInputProps()}   />
@@ -124,6 +124,7 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                   {/* a_ guardarlo en una variable b_  */}
                   
                 {/* </form> */}
+                </Grid>
       </Grid>
     </List>
   );

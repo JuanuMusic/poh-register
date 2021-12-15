@@ -189,28 +189,34 @@ $border-radius-lg: 2rem;
   }
 
   .StepCrPf {
-    max-width: 846px;
     display: flex;
     justify-content: center;
-    margin-top: -30px;
+    max-width: 846px;
+    width: 100%;
+    // position: fixed;
+    margin-top: -48px;
     margin-bottom: 82px;
     }
 
   .stepPh {
-    margin-top: -30px;
-    margin-bottom: 82px;
-    max-width: 846px;
-    width: 100% !important;
-    position: fixed;
     display: flex;
     justify-content: center;
+    margin-top: -48px;
+    margin-bottom: 82px;
+    max-width: 846px;
+    width: 100% ;
+    // position: fixed;
     
   }
 
   .stepPv {
-    max-width: 846px;
     display: flex;
     justify-content: center;
+    margin-top: -48px;
+    margin-bottom: 82px;
+    max-width: 846px;
+    width: 100% ;
+    // position: fixed;
     
   }
 
