@@ -8,6 +8,8 @@ $color-black: #0000;
 $border-radius-sm: 0.25rem;
 $border-radius-lg: 2rem;
 
+
+
 .headerLogo {
 
   position: absolute;
@@ -295,7 +297,7 @@ $border-radius-lg: 2rem;
   .shortBio {
     position: relative;
     left: 121px;
-    top: -43px;
+    top: -12px;
     font-size: 14px;
     font-family: Open sans, sans-serif;
   }
@@ -453,7 +455,8 @@ $border-radius-lg: 2rem;
 
   .dragndrop {
     // position: relative;
-
+    display: flex !important;
+    flex-direction: column;
     max-width: 855px;
     width: 100%;
     height: 95px;

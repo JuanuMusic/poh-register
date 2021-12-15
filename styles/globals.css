@@ -14,12 +14,12 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
   height: 100vh;
   /* width: auto; */
-  background: #FFFCF0;
+background: #FFFCF0;
   display: flex;
   justify-content: center;
+  
 }
 .imgConnect {
-  
   top: -2rem;
 }
 
