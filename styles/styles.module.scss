@@ -70,7 +70,7 @@ $border-radius-lg: 2rem;
 .wlltcnt {
   position: relative !important;
   top: -13px !important;
-  left: 1px !important;
+  left: 0px !important;
   display: block;
   width: 23px !important;
   height: 18px !important;
@@ -120,6 +120,7 @@ $border-radius-lg: 2rem;
   .title {
     margin-top: 40px;
     display: block;
+    color: black;
     align-items: center;
     position: static;
     width: 110px !important;
@@ -171,9 +172,9 @@ $border-radius-lg: 2rem;
 
   .needWallet {
     position:relative !important;
-    left: -90px;
+    left: -83px;
     top: 1px;
-    width: 108px;
+    width: 113px;
     height: 22px;
     font-family: Open Sans;
     font-style: normal;
@@ -217,7 +218,7 @@ $border-radius-lg: 2rem;
     color: #979797;
     width: 264px;
     height: 19px;
-    left: 3px;
+    left: 7px;
     top: -1px;
     position: relative !important;
     margin: auto;

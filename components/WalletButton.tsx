@@ -47,12 +47,12 @@ export default function WalletButton(props: {
         color: 'black',
         textTransform: 'none',
         margin: 'auto',
-        left: '5px',
+        left: '12px',
         width: '-webkit-fill-available',
         top: '-14px',
         padding: 0,
       }}>
-      {rendered === "" && "Already have a wallet"}
+      {rendered === "" && "I already have a wallet"}
       {rendered !== "" && rendered}
       
     </Button>
