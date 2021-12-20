@@ -3,7 +3,7 @@ import styles from "../../styles/styles.module.scss";
 
 
 export default function ReturnBtn({ currentStep, prevFormStep }) {
-    return (currentStep < 5) ? (
+    return (currentStep < 6) ? (
         <>
           {currentStep > 0 && (
             <button 

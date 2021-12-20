@@ -6,12 +6,11 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
-import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepUpPh from "../../components/StepUpPh";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
-import ReturnBtn from "./ReturnBtn";
+import FormCTA from "./FormCTA";
 import { useDropzone } from "react-dropzone";
 
 export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
@@ -133,19 +132,10 @@ export default function UploadPhoto({ formStep, nextFormStep, prevFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                
-                <div className={styles.ctaSection}>
-                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
-                  <Button className={styles.btnSaUpPh} type="submit" >
-                    <div className={styles.btnSave}>
-                      <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
-                    </div>
-                    <a>Save & Continue</a>
-                  </Button>
-                  
-                </div>
-                </form>
-              </Grid>  
+
+              <FormCTA formStep={formStep} prevFormStep={prevFormStep} />
+            </form>
+          </Grid>  
         </Grid>
     </List>
   );

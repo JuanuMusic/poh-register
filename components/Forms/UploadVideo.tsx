@@ -6,11 +6,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
-import Button from '@mui/material/Button';
-import Image from 'next/image';
 import StepUpVd from "../../components/StepUpVd";
-import ReturnBtn from "./ReturnBtn";
 import "../../node_modules/video-react/dist/video-react.css";
+import FormCTA from "./FormCTA";
 import { useDropzone } from "react-dropzone";
 
 
@@ -84,7 +82,7 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                             <li>• Minimum width: equal to or higher than 352 pixels</li>
                           </ul>
               
-                <form style={{display: "flex", flexDirection: 'column' }} onSubmit={handleSubmit(onSubmit)}>
+                <form style={{display: "flex", flexDirection: "column", margin: "auto"}} onSubmit={handleSubmit(onSubmit)}>
                   <div {...getRootProps()}>
                   {/* <input type="file" {...register("photo")}/> */}
                    <input  {...getInputProps()}   />
@@ -101,17 +99,8 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
                     <label htmlFor="photo">Your Photo</label>
                     <input type="file" {...register("photo")} />
                   </div> */}
-                
-                  <div className={styles.ctaSection}>
-                    <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
-                    <Button className={styles.btnSaUpVd} type="submit" >
-                      <div className={styles.btnSave}>
-                        <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
-                      </div>
-                      <a>Save & Continue</a>
-                    </Button>
-                    
-                  </div>
+
+                  <FormCTA formStep={formStep} prevFormStep={prevFormStep} />
                 </form>  
                 {/* <form onSubmit={handleSubmit(onSubmit)}>
                   <div className={styles.formRow}>

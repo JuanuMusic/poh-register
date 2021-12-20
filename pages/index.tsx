@@ -23,7 +23,7 @@ import Grid from "@material-ui/core/Grid";
 
 const App = () => {
 	const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
-	const [formStep, setFormStep] = useState(0);
+	const [formStep, setFormStep] = useState(5);
 	const [account, setAccount] = useState();
 
 	const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
@@ -47,7 +47,7 @@ const App = () => {
 				// If accounts are found, go to the first step.
 				if(accounts.length > 0) {
 					setAccount(accounts[0]);
-					setFormStep(1);
+					setFormStep(5);
 					return;
 				}
 
@@ -76,14 +76,10 @@ const App = () => {
 					provider={provider}
 					loadWeb3Modal={loadWeb3Modal}
 					logoutOfWeb3Modal={logoutOfWeb3Modal} />
-			<Grid container spacing={1}
-			variant="fullWidth"
-			direction="column"
-			justifyContent="space-around"
-			alignItems="left" style={{marginTop: '4px'}}>
+			<Grid container spacing={1} variant="fullWidth"
+			      direction="column" justifyContent="space-around" alignItems="left" style={{marginTop: '4px'}}>
             <Grid item xs={12} md={12} >
               <ListItem className={styles.container}  alignItems="flex-start">
-				  
 					<FormCard currentStep={formStep} prevFormStep={prevFormStep}>
 						{formStep === 0 && (
 							<ConnectWallet
@@ -107,7 +103,7 @@ const App = () => {
 							<ReviewProfile prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 						{formStep === 5 && (
-							<SubmitProfile formStep={formStep} nextFormStep={nextFormStep} />
+							<SubmitProfile prevFormStep={prevFormStep} formStep={formStep} nextFormStep={nextFormStep} />
 						)}
 
 						{formStep > 5 && <FormCompleted />}

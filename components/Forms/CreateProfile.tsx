@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import StepCrPf from "../StepCrPf";
+import FormCTA from "./FormCTA";
 import ReturnBtn from "./ReturnBtn";
 
 export default function CreateProfile({ formStep, nextFormStep, prevFormStep }) {
@@ -50,28 +51,7 @@ export default function CreateProfile({ formStep, nextFormStep, prevFormStep }) 
                   {/* <label htmlFor="bio">short bio(ex: Cypherpunk, smart contract developer)</label> */}
                   <textarea className={styles.pshortBio} placeholder="short bio(ex: Cypherpunk, smart contract developer)" style={{height: "130px", width: "658px", border: "none", resize: "none"}}  {...register("bio")} />
                 </div>
-                <div className={styles.ctaSection}>
-                {/* {currentStep < 5 && (
-                   <>
-                      {currentStep > 0 && (
-                        <Button
-                            className={styles.back}
-                            onClick={prevFormStep}
-                            type="button"
-                          >
-                            Return
-                          </Button>
-                        )}
-                    </>
-                  )} */}
-                  <ReturnBtn currentStep={formStep} prevFormStep={prevFormStep} />
-                  <Button  className={styles.btnSaCcmpProf} type="submit" >
-                    <div className={styles.btnSave}>
-                      <Image  src="/images/logopohforbutton.png" alt="me" width="13" height="15"/>
-                    </div>
-                    <a>Save & Continue</a>
-                  </Button>
-                </div>
+                <FormCTA formStep={formStep} prevFormStep={prevFormStep} />
               </form>
             </Grid>
       </Grid>

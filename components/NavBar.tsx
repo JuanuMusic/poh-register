@@ -24,10 +24,10 @@ export default function NavBar({ nextFormStep, provider, loadWeb3Modal, logoutOf
   };
 
   return (
-    <div >
-      <Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31"    />
+    <div className={styles.NavbarContainer}>
+      <Image className={styles.headerLogo} src="/images/logopoh.png" alt="me" width="26" height="31" />
       <ListItem className={styles.NavConnect} >
-        <ListItemText style={{color:"#979797", width: "310px"}}>Already Registered?
+        <ListItemText style={{color:"#979797", flex: "initial", width: "auto"}}>Already Registered?
       <WalletButtonH
       onClick={() => nextFormStep()}
       provider={provider as Web3Provider}
