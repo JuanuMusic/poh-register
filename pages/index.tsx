@@ -23,7 +23,7 @@ import Grid from "@material-ui/core/Grid";
 
 const App = () => {
 	const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
-	const [formStep, setFormStep] = useState(5);
+	const [formStep, setFormStep] = useState(0);
 	const [account, setAccount] = useState();
 
 	const nextFormStep = () => setFormStep((currentStep) => currentStep + 1);
