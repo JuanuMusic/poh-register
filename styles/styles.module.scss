@@ -137,7 +137,38 @@ $border-radius-lg: 2rem;
   }
 
   .titlecmpProf {
-    margin-top: 40px;
+    margin-top: -26px;
+    margin-bottom: 90px;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 33px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 525 !important;
+    font-size: 24px;
+    line-height: 33px;
+    color: black;
+  }
+
+  .titleProfVideo {
+    margin-top: -26px;
+    margin-bottom: 48px;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 33px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 525 !important;
+    font-size: 24px;
+    line-height: 33px;
+    color: black;
+  }
+
+  .titleProfRev {
+    margin-top: 44px;
+    margin-bottom: 50px;
     display: block;
     align-items: center;
     position: relative;
@@ -692,7 +723,7 @@ $border-radius-lg: 2rem;
   font-weight: 400;
   text-align: center;
   margin-top: 52px;
-  margin-bottom: 48px;
+  margin-bottom: 3rem !important;
 }
 
 .submitProfileInputParentGroup {
@@ -779,6 +810,7 @@ $border-radius-lg: 2rem;
 
 .modalProfileSubmittedView {
   background-color: #fff;
+  margin-top: 60px;
   border-radius: 3px;
   width: 75vw;
   height: 80vh;

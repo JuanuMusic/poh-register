@@ -28,7 +28,7 @@ export default function ReviewProfile({ formStep, nextFormStep, prevFormStep }) 
             alignItems="flex-start" style={{marginTop: '4px'}}>
         <Grid direction="row" item xs={12} md={12} style={{margin: 'auto'}}>
           <ListItem style={{flexDirection: 'column'}}>
-            <ListItemText disableTypography className={styles.titlecmpProf}>Preview</ListItemText>
+            <ListItemText disableTypography className={styles.titleProfRev}>Preview</ListItemText>
           </ListItem>
         </Grid>
         <p className={styles.reviewProfileDescription}>

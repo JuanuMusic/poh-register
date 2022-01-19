@@ -49,7 +49,7 @@ export default function UploadVideo({ formStep, nextFormStep, prevFormStep }) {
             alignItems="flex-start" style={{marginTop: '4px'}}>
               <Grid direction="row" item xs={12} md={12}>
                 <ListItem style={{flexDirection: 'column'}}>
-                  <ListItemText disableTypography className={styles.titlecmpProf}>Upload Video</ListItemText>
+                  <ListItemText disableTypography className={styles.titleProfVideo}>Upload Video</ListItemText>
                 </ListItem>
               </Grid>
               <Grid container spacing={2} className={formStep === 3 ? styles.showForm : styles.hideForm} item xs={12} md={12}
