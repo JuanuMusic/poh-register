@@ -1,30 +1,15 @@
 import { useFormData } from "../context";
-import styles from "../styles/styles.module.scss";
-
-export default function FormCard({ children, currentStep, prevFormStep }) {
+ 
+export default function FormCard({ children }) {
   const { data } = useFormData();
 
   return (
-    <div className={styles.formCard}>
-      {currentStep < 5 && (
-        <>
-          {currentStep > 0 && (
-            <button
-              className={styles.back}
-              onClick={prevFormStep}
-              type="button"
-            >
-              Back
-            </button>
-          )}
-
-          <span className={styles.steps}>Step {currentStep + 1}/5</span>
-        </>
-      )}
+    <div>
       {children}
-      <hr style={{margin: "2rem 0;"}} />
-      <h3>Profile Data</h3>
-      <ul>
+      {/* <hr style={{margin: "2rem 0;"}} /> */}
+      {/* <h3>Profile Data</h3> */}
+      {/*  remove style display none in "ul" below to display the data */}
+      <ul style={{display: "none"}}>
       {
         Object.keys(data).map((key, i) => {
           if (typeof(data[key]) === 'object' && data[key][0] != null) {

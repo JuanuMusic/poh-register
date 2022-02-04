@@ -1,11 +1,11 @@
 import { useState, createContext, useContext } from "react";
 
-export const FormContext = createContext();
+export const FormContext = createContext<any>(null);
 
 export default function FormProvider({ children }) {
   const [data, setData] = useState({});
 
-  const setFormValues = (values) => {
+  const setFormValues: any = (values) => {
     setData((prevValues) => ({
       ...prevValues,
       ...values,
